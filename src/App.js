@@ -1,5 +1,5 @@
 import './css/style.css';
-import Home from './components/Home';
+import Home from './pages/Home';
 // import { BrowserRouter as Router, Switch } from 'react-router-dom';
 
 function App() {
