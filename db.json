@@ -9,70 +9,71 @@
         {
           "issueId": 1,
           "title": "X",
+          "result": 0,
           "estMembers": [
             {
               "memberId": 1,
-              "estMember": 0
+              "estTimeMember": 0
             }, {
               "memberId": 2,
-              "estMember": 0
+              "estTimeMember": 0
             }, {
               "memberId": 3,
-              "estMember": 0
+              "estTimeMember": 0
             }, {
               "memberId": 4,
-              "estMember": 0
+              "estTimeMember": 0
             }, {
               "memberId": 5,
-              "estMember": 0
+              "estTimeMember": 0
             }
           ]
         }, {
           "issueId": 2,
           "title": "X",
+          "result": 0,
           "estMembers": [
             {
               "memberId": 1,
-              "estMember": 0
+              "estTimeMember": 0
             }, {
               "memberId": 2,
-              "estMember": 0
+              "estTimeMember": 0
             }, {
               "memberId": 3,
-              "estMember": 0
+              "estTimeMember": 0
             }, {
               "memberId": 4,
-              "estMember": 0
+              "estTimeMember": 0
             }, {
               "memberId": 5,
-              "estMember": 0
+              "estTimeMember": 0
             }
           ]
         }, {
           "issueId": 3,
           "title": "X",
+          "result": 0,
           "estMembers": [
             {
               "memberId": 1,
-              "estMember": 0
+              "estTimeMember": 0
             }, {
               "memberId": 2,
-              "estMember": 0
+              "estTimeMember": 0
             }, {
               "memberId": 3,
-              "estMember": 0
+              "estTimeMember": 0
             }, {
               "memberId": 4,
-              "estMember": 0
+              "estTimeMember": 0
             }, {
               "memberId": 5,
-              "estMember": 0
+              "estTimeMember": 0
             }
           ]
         }
-      ], 
-      "estGroup": 0,
-      "result": 0
+      ]
     }, {
       "projectName": "Project B",
       "projectId": 2,
@@ -82,70 +83,71 @@
         {
           "issueId": 1,
           "title": "X",
+          "result": 0,
           "estMembers": [
             {
               "memberId": 1,
-              "estMember": 0
+              "estTimeMember": 0
             }, {
               "memberId": 2,
-              "estMember": 0
+              "estTimeMember": 0
             }, {
               "memberId": 3,
-              "estMember": 0
+              "estTimeMember": 0
             }, {
               "memberId": 4,
-              "estMember": 0
+              "estTimeMember": 0
             }, {
               "memberId": 5,
-              "estMember": 0
+              "estTimeMember": 0
             }
           ]
         }, {
           "issueId": 2,
           "title": "X",
+          "result": 0,
           "estMembers": [
             {
               "memberId": 1,
-              "estMember": 0
+              "estTimeMember": 0
             }, {
               "memberId": 2,
-              "estMember": 0
+              "estTimeMember": 0
             }, {
               "memberId": 3,
-              "estMember": 0
+              "estTimeMember": 0
             }, {
               "memberId": 4,
-              "estMember": 0
+              "estTimeMember": 0
             }, {
               "memberId": 5,
-              "estMember": 0
+              "estTimeMember": 0
             }
           ]
         }, {
           "issueId": 3,
           "title": "X",
+          "result": 0,
           "estMembers": [
             {
               "memberId": 1,
-              "estMember": 0
+              "estTimeMember": 0
             }, {
               "memberId": 2,
-              "estMember": 0
+              "estTimeMember": 0
             }, {
               "memberId": 3,
-              "estMember": 0
+              "estTimeMember": 0
             }, {
               "memberId": 4,
-              "estMember": 0
+              "estTimeMember": 0
             }, {
               "memberId": 5,
-              "estMember": 0
+              "estTimeMember": 0
             }
           ]
         }
-      ], 
-      "estGroup": 0,
-      "result": 0
+      ]
     },  {
       "projectName": "Project C",
       "projectId": 2,
@@ -155,28 +157,27 @@
         {
           "issueId": 1,
           "title": "X",
+          "result": 0,
           "estMembers": [
             {
               "memberId": 1,
-              "estMember": 0
+              "estTimeMember": 0
             }, {
               "memberId": 2,
-              "estMember": 0
+              "estTimeMember": 0
             }, {
               "memberId": 3,
-              "estMember": 0
+              "estTimeMember": 0
             }, {
               "memberId": 4,
-              "estMember": 0
+              "estTimeMember": 0
             }, {
               "memberId": 5,
-              "estMember": 0
+              "estTimeMember": 0
             }
           ]
         }
-      ], 
-      "estGroup": 0,
-      "result": 0
+      ]
     }
     
   ]

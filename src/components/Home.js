@@ -40,7 +40,7 @@ export default function Home() {
 
                 <div className="listHeader">
                     <h2>Projects</h2>
-                    <AddProject />
+                    <AddProject projects={projects}/>
                 </div>
 
                 {projects.map((item, i) => (
@@ -56,7 +56,7 @@ export default function Home() {
                             {item.projectDesc}
                         <div className="listItemFooter">
                             {item.estComplete ? <i className="fas fa-check-circle"/> : <i className="fas fa-exclamation-circle"/>}
-                            <button onClick={() => <Project />}> Visit Project </button>
+                            <button onClick={() => <Project projects={projects}/>}> Visit Project </button>
                         </div>
                         </div> : ""
                         }
