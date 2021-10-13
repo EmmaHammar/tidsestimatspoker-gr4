@@ -2,8 +2,8 @@ import React from 'react'
 import styles from '../styles/Home.module.scss'
 import { useState} from 'react';
 import AddProject from './AddProject';
-import Project from './Project';
 import { v4 as uuid } from 'uuid'
+import {Link} from 'react-router-dom'
 
 
 export default function ProjectList({projects}) {
@@ -23,7 +23,9 @@ export default function ProjectList({projects}) {
 
         <div className={styles.listHeader}>
             <h2>Projects</h2>
-            <AddProject projects={projects} />
+            <Link to="/AddProject" >
+                 <button>  Add Project </button>  
+            </Link>
         </div>
 
         {projects.map((item, i) => (
@@ -43,7 +45,7 @@ export default function ProjectList({projects}) {
 
                             {item.estComplete ? <i className={`${styles.iconTrue} fas fa-check-circle`}/> : <i className={`${styles.iconFalse} fas fa-exclamation-circle`}/>}
 
-                            <button onClick={() => <Project projects={projects} />}> Visit Project </button>
+                            <Link to="/Project">  <button> Visit Project </button>  </Link>
                         </div>
                     </div> : ""
                 }

@@ -1,5 +1,6 @@
 import React from 'react';
-// import Calculate from './Calculate';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 export default function Project({projects}) {
 
@@ -7,9 +8,14 @@ export default function Project({projects}) {
     console.log("prjects", projects)
 
     return (
-        <div>
-            <h2>Project</h2>
-            {/* <Calculate /> */}
-        </div>
+
+        <>
+        <Header/>
+            <div>
+                <h2>Project</h2>
+                {/* <Calculate /> */}
+            </div>
+        <Footer/>
+        </>
     )
 };

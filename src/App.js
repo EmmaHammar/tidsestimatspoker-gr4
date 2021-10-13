@@ -1,34 +1,30 @@
+import React from 'react'
 import './styles/style.css';
 import Home from './pages/Home';
-// import { BrowserRouter as Router, Switch } from 'react-router-dom';
+import AddProject from './pages/AddProject';
+import Project from './pages/Project'
+import Header from './components/Header';
+import Footer from './components/Footer';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
   return (
-    
-    <div className="App">
-      <Home /> 
-    </div>
+
+    <Router>
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route exact path="/AddProject">
+          <AddProject />
+        </Route>
+        <Route exact path="/Project">
+          <Project />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
 export default App;
 
-
-// Routing
-
-{/* <Router>
-        <Switch>
-            <IsUserRedirect user={user} loggedInPath={ROUTES.BROWSE} path={ROUTES.SIGN_IN}>
-                <Signin />
-            </IsUserRedirect>
-            <IsUserRedirect user={user} loggedInPath={ROUTES.BROWSE} path={ROUTES.SIGN_UP}>
-                <Signup />
-            </IsUserRedirect>
-            <ProtectedRoute user={user} path={ROUTES.BROWSE}>
-                <Browse />
-            </ProtectedRoute>
-            <IsUserRedirect user={user} loggedInPath={ROUTES.BROWSE} path={ROUTES.HOME}>
-                <Home />
-            </IsUserRedirect>
-        </Switch>
-    </Router> */}
