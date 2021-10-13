@@ -1,0 +1,18 @@
+@import "./home.css";
+@import "./header.css";
+@import "./footer.css";
+
+
+body{
+    margin: auto;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: url('../img/bright-time.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+
