@@ -7,6 +7,7 @@ import {Link} from 'react-router-dom'
 
 
 export default function ProjectList({projects}) {
+    console.log("projects from projectList",projects);
 
     const [selected, setSelected] = useState(null);
 

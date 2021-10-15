@@ -1,0 +1,36 @@
+.estimateprojektContainer{
+    background-color: rgb(214, 223, 226);
+    opacity: 0.98;
+    max-width: 800px;
+    margin: 30px auto;
+    min-height: 500px;
+    padding: 30px;
+    border-radius: 10px;
+    
+    .issuesBoxContainer{
+        
+        background: gray;
+    }
+    
+    .issueList{
+
+        display: flex;
+        flex-direction: row;
+        .issueListTitle{
+                    margin-bottom: 2px;
+                    background: #f4f4f4;
+                    padding: 10px;
+                }
+        .issueListNummber{
+            margin-bottom: 2px;
+            background: #f4f4f4;
+            padding: 10px;
+            text-align: center;
+        }
+
+
+    }
+       
+        
+
+}
