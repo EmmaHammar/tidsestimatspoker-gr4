@@ -7,6 +7,8 @@ export default function Project({projects}) {
 
     console.log("prjects", projects)
 
+
+
     return (
 
         <>
