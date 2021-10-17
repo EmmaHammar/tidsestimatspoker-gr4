@@ -6,7 +6,7 @@ export default function Estimate({projects,setProjects}) {
     console.log("projects from estimate", projects);
     return (
         <div>
-          <EstimatIssue projects={projects} setProjects={setProjects}/>  
+        
         </div>
     )
 }

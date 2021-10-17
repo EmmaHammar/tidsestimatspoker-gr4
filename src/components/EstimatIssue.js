@@ -11,12 +11,15 @@ export default function EstimatIssue({projects,setProjects}) {
         const { get,post} = useFetch("http://localhost:3000");
         const [oneProject,setOneProject]=useState([])
         const[estMembers, setEstmembers]=useState([])
-        
+        const [members, setMembers] = useState([]);
+    const [clickedId, setClickedId] = useState(Number);
       // const [newEstMembersDetails,setnewEstMembersDetails]=useState({memberId:"",estTimeMember:""});
        const [newEstMembersDetails,setnewEstMembersDetails]=useState([]);
 //FETCH SELECTED PROJECT DATA 
 useEffect(() => {
     getProjects();
+    let members = ["Axel", "Emma", "Sandra", "Sara K", "Sara M"];
+        setMembers(members);
 }, [])
 
 const getProjects = () => {
@@ -28,19 +31,23 @@ const getProjects = () => {
         })
 };
 console.log(oneProject);
+//FUNCTION HANDLE CLICK IN NAMES 
+const handleClick = (evt) => {
+    setClickedId(evt.target.id);
+    {setnewEstMembersDetails(previousState=>{return{...previousState,memberId:"Sara"}})}
+}
 //FUNCTION THAT ONCHANG INPUT WILL RUN 
         const addEstimateTime=(event)=>{
             event.preventDefault();
                     console.log(event.target.id);
                     console.log(newEstMembersDetails);
                     if(newEstMembersDetails.estTimeMember){
-                        setEstmembers(prevStateEstMember=>{return [...prevStateEstMember,{issueId:Number(event.target.id),estMembers:newEstMembersDetails.estTimeMember,memberId:newEstMembersDetails.memberId}]})
-                            
+                        setEstmembers(prevStateEstMember=>{return [...prevStateEstMember,{issueId:Number(event.target.id),estMembers:newEstMembersDetails.estTimeMember,memberId:newEstMembersDetails.memberId}]})      
                     }
                   
             }
            
-       
+//FUNCTION FOR DEVIDIND THE SPECIFIC ISSUE DETAILS       
         const devideIssue=()=>{
             console.log(oneProject);
             console.log(estMembers);
@@ -69,14 +76,15 @@ console.log(oneProject);
     return (
        
         <>
-      {/* THIS PART MUST BE DELETED AFTER #6 ISSUE OF REPO  */}
-                <div>
-                <button onClick={()=>{setnewEstMembersDetails(previousState=>{return{...previousState,memberId:"Sara"}})}}>Sara</button>
-                </div>
-                <div>
-                <button onClick={()=>{setnewEstMembersDetails(previousState=>{return{...previousState,memberId:"Emma"}})}}>Emma</button>
-                </div>
-        <div className={styles.container}>      
+        <div>
+      {projects.filter(project=>project.id==1).map((project) => <div><h1>{project.projectName}</h1></div>)}
+      </div>
+       
+      
+        <div className={styles.container}>  
+        {members.map( (member, i) => (
+                <button onClick={()=>{setnewEstMembersDetails(previousState=>{return{...previousState,memberId:member}})}}  key={i}>{member}</button>
+            )) }    
            <table className='table table-bordered'>
                <thead className='thead-dark'>
                    <tr>
@@ -85,7 +93,9 @@ console.log(oneProject);
                    </tr>
                </thead>
                <tbody>
-                
+                   <div>
+                {console.log(projects)}
+                </div>
                    {projects.filter(project=>project.id==1).map((project) => <div>
                     {
                 (typeof(project.issueList)=='object')?

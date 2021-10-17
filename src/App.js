@@ -37,11 +37,9 @@ console.log("projects from App",projects);
           <AddProject />
         </Route>
         <Route exact path="/Project">
-          <Project />
+          <Project projects={projects} setProjects={setProjects}/>
         </Route>
-        <Route exact path="/EstimateIssue">
-          <Estimate projects={projects} setProjects={setProjects}/>
-        </Route>
+        
       </Switch>
     </Router>
   );
