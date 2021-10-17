@@ -31,11 +31,7 @@ const getProjects = () => {
         })
 };
 console.log(oneProject);
-//FUNCTION HANDLE CLICK IN NAMES 
-const handleClick = (evt) => {
-    setClickedId(evt.target.id);
-    {setnewEstMembersDetails(previousState=>{return{...previousState,memberId:"Sara"}})}
-}
+
 //FUNCTION THAT ONCHANG INPUT WILL RUN 
         const addEstimateTime=(event)=>{
             event.preventDefault();
