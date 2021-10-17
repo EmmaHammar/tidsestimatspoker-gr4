@@ -11,7 +11,7 @@ export default function EstimatIssue({projects,setProjects}) {
         const { get,post} = useFetch("http://localhost:3000");
         const [oneProject,setOneProject]=useState([])
         const[estMembers, setEstmembers]=useState([])
-        const [number,setNumber]=useState(0)
+        
       // const [newEstMembersDetails,setnewEstMembersDetails]=useState({memberId:"",estTimeMember:""});
        const [newEstMembersDetails,setnewEstMembersDetails]=useState([]);
 //FETCH SELECTED PROJECT DATA 
