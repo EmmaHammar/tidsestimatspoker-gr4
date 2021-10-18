@@ -1,0 +1,114 @@
+.issueEdit{
+    position: absolute;
+    right: -22rem;
+    bottom: 0;
+    width: 300px;
+    margin: 0;
+    border: 4px solid #4bb820;
+    padding: 0.7rem;
+    text-align: center;
+    font-weight: 900;
+    color: #2c4b49;
+    font-family: arial;
+    
+
+    ::before{
+        content: "";
+        width: 0px;
+        height: 0px;
+        position: absolute;
+        border-left: 10px solid transparent;
+        border-right: 10px solid #00bfb6;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        left: -23px;
+        bottom: 10px;
+
+    }
+
+    ::after{
+        content: "";
+        width: 0px;
+        height: 0px;
+        position: absolute;
+        border-left: 10px solid transparent;
+        border-right: 10px solid rgb(238, 238, 238);
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        left: -17px;
+        bottom: 10px;
+    }
+
+    .content{
+        outline: 2px solid rgb(206, 223, 230);
+        border-radius: 5px;
+        padding: 1rem 1rem;
+        display: flex;
+        flex-direction: column;
+
+        h4{
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            margin: 1rem;
+
+
+            img{
+                width: 1rem;
+                align-self: flex-end;
+            }
+        }
+
+        p{
+            color: #292929;
+            margin: .5rem;
+            align-self: flex-start;
+        }
+
+        input{
+            max-height: 10rem;
+            width: 90%;
+            border: none;
+            min-height: 2rem;
+            outline: 1px solid rgb(206, 223, 230);
+            border-radius: .5rem;
+        }
+
+        .footer{
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            margin-top: 1rem;
+            
+            button{
+                margin: 10px;
+                background-color: rgb(228, 228, 228);
+                width: 5rem;
+                min-height: 2rem;
+                text-align: center;
+                border-radius: 10rem;
+                border: none;
+                cursor: pointer;
+                font-weight: 800;
+    
+                &:hover{
+                    background-color: rgb(216, 216, 216);
+                }
+
+                // img{
+                //     width: 1rem;
+                // }
+            }
+    
+            .reject{
+                background-color: rgb(238, 138, 108);
+            }
+    
+            .approve{
+               background-color: rgb(108, 238, 108);
+            }  
+        }
+
+    }
+}
+

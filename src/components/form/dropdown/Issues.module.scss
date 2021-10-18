@@ -1,0 +1,23 @@
+.dropdown{
+    margin-top: 1rem;
+    outline: 1px solid rgb(206, 223, 230);
+    border-radius: 0.5rem;
+    position: relative;
+    
+    .dropdownHeader{
+        display: flex;
+        justify-content: space-between;
+        padding: 0 1rem;
+
+        span{
+            cursor: pointer;
+        }
+
+        img{
+            width: 1rem;
+            margin-right: 1rem;
+        }
+    }
+
+}
+
