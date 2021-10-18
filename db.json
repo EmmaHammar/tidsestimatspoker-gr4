@@ -2,211 +2,176 @@
   "projects": [
     {
       "projectName": "Project A",
-      "id": 1,
+      "projectId": 1,
       "projectDesc": "A project description is a high-level overview of why you're doing a project. The document explains a project's objectives and its essential qualities. ... The project description should include an overview of the following: Project goals and objectives. Stakeholders and their roles",
       "estComplete": true,
       "issueList": [
         {
-          "issueId": 11,
-          "title": "App.js",
-          "result": 0,
-          "estMembers": [
-            {
-              "memberId": 1,
-              "estTimeMember": 15
-            },
-            {
-              "memberId": 2,
-              "estTimeMember": 17
-            },
-            {
-              "memberId": 3,
-              "estTimeMember": 12
-            },
-            {
-              "memberId": 4,
-              "estTimeMember": 9
-            },
-            {
-              "memberId": 5,
-              "estTimeMember": 8
-            }
-          ]
-        },
-        {
-          "issueId": 12,
-          "title": "Addproject.js",
-          "result": 0,
-          "estMembers": [
-            {
-              "memberId": 1,
-              "estTimeMember": 11
-            },
-            {
-              "memberId": 2,
-              "estTimeMember": 12
-            },
-            {
-              "memberId": 3,
-              "estTimeMember": 13
-            },
-            {
-              "memberId": 4,
-              "estTimeMember": 15
-            },
-            {
-              "memberId": 5,
-              "estTimeMember": 0
-            }
-          ]
-        },
-        {
-          "issueId": 13,
-          "title": "Calculate.js",
-          "result": 0,
-          "estMembers": [
-            {
-              "memberId": 1,
-              "estTimeMember": 30
-            },
-            {
-              "memberId": 2,
-              "estTimeMember": 40
-            },
-            {
-              "memberId": 3,
-              "estTimeMember": 50
-            },
-            {
-              "memberId": 4,
-              "estTimeMember": 60
-            },
-            {
-              "memberId": 5,
-              "estTimeMember": 10
-            }
-          ]
-        }
-      ],
-      "estTimeMember": "5"
-    },
-    {
-      "projectName": "Project B",
-      "id": 2,
-      "projectDesc": "React (also known as React.js or ReactJS) is a free and open-source front-end JavaScript library[3] for building user interfaces or UI components. It is maintained by Facebook and a community of individual developers and companies.[4][5][6] React can be used as a base in the development of single-page or mobile applications.",
-      "estComplete": false,
-      "issueList": [
-        {
-          "issueId": 21,
+          "issueId": 1,
           "title": "X",
           "result": 0,
-          "estMembers": [
+          "members": [
             {
               "memberId": 1,
               "estTimeMember": 0
-            },
-            {
+            }, {
               "memberId": 2,
               "estTimeMember": 0
-            },
-            {
+            }, {
               "memberId": 3,
               "estTimeMember": 0
-            },
-            {
+            }, {
               "memberId": 4,
               "estTimeMember": 0
-            },
-            {
+            }, {
               "memberId": 5,
               "estTimeMember": 0
             }
           ]
-        },
-        {
-          "issueId": 22,
+        }, {
+          "issueId": 2,
           "title": "X",
           "result": 0,
-          "estMembers": [
+          "members": [
             {
               "memberId": 1,
               "estTimeMember": 0
-            },
-            {
+            }, {
               "memberId": 2,
               "estTimeMember": 0
-            },
-            {
+            }, {
               "memberId": 3,
               "estTimeMember": 0
-            },
-            {
+            }, {
               "memberId": 4,
               "estTimeMember": 0
-            },
-            {
+            }, {
               "memberId": 5,
               "estTimeMember": 0
             }
           ]
-        },
-        {
-          "issueId": 23,
+        }, {
+          "issueId": 3,
           "title": "X",
           "result": 0,
-          "estMembers": [
+          "members": [
             {
               "memberId": 1,
               "estTimeMember": 0
-            },
-            {
+            }, {
               "memberId": 2,
               "estTimeMember": 0
-            },
-            {
+            }, {
               "memberId": 3,
               "estTimeMember": 0
-            },
-            {
+            }, {
               "memberId": 4,
               "estTimeMember": 0
-            },
-            {
+            }, {
               "memberId": 5,
               "estTimeMember": 0
             }
           ]
         }
       ]
-    },
-    {
+    }, {
+      "projectName": "Project B",
+      "projectId": 2,
+      "projectDesc": "React (also known as React.js or ReactJS) is a free and open-source front-end JavaScript library[3] for building user interfaces or UI components. It is maintained by Facebook and a community of individual developers and companies.[4][5][6] React can be used as a base in the development of single-page or mobile applications.",
+      "estComplete": false,
+      "issueList": [
+        {
+          "issueId": 1,
+          "title": "X",
+          "result": 0,
+          "members": [
+            {
+              "memberId": 1,
+              "estTimeMember": 0
+            }, {
+              "memberId": 2,
+              "estTimeMember": 0
+            }, {
+              "memberId": 3,
+              "estTimeMember": 0
+            }, {
+              "memberId": 4,
+              "estTimeMember": 0
+            }, {
+              "memberId": 5,
+              "estTimeMember": 0
+            }
+          ]
+        }, {
+          "issueId": 2,
+          "title": "X",
+          "result": 0,
+          "members": [
+            {
+              "memberId": 1,
+              "estTimeMember": 0
+            }, {
+              "memberId": 2,
+              "estTimeMember": 0
+            }, {
+              "memberId": 3,
+              "estTimeMember": 0
+            }, {
+              "memberId": 4,
+              "estTimeMember": 0
+            }, {
+              "memberId": 5,
+              "estTimeMember": 0
+            }
+          ]
+        }, {
+          "issueId": 3,
+          "title": "X",
+          "result": 0,
+          "members": [
+            {
+              "memberId": 1,
+              "estTimeMember": 0
+            }, {
+              "memberId": 2,
+              "estTimeMember": 0
+            }, {
+              "memberId": 3,
+              "estTimeMember": 0
+            }, {
+              "memberId": 4,
+              "estTimeMember": 0
+            }, {
+              "memberId": 5,
+              "estTimeMember": 0
+            }
+          ]
+        }
+      ]
+    },  {
       "projectName": "Project C",
-      "id": 3,
+      "projectId": 2,
       "projectDesc": "React (also known as React.js or ReactJS) is a free and open-source front-end JavaScript library[3] for building user interfaces or UI components. It is maintained by Facebook and a community of individual developers and companies",
       "estComplete": true,
       "issueList": [
         {
-          "issueId": 31,
+          "issueId": 1,
           "title": "X",
           "result": 0,
-          "estMembers": [
+          "members": [
             {
               "memberId": 1,
               "estTimeMember": 0
-            },
-            {
+            }, {
               "memberId": 2,
               "estTimeMember": 0
-            },
-            {
+            }, {
               "memberId": 3,
               "estTimeMember": 0
-            },
-            {
+            }, {
               "memberId": 4,
               "estTimeMember": 0
-            },
-            {
+            }, {
               "memberId": 5,
               "estTimeMember": 0
             }
@@ -214,5 +179,7 @@
         }
       ]
     }
+    
   ]
+
 }
