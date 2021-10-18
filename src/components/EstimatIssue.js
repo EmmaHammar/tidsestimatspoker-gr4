@@ -4,7 +4,7 @@ import styles from '../styles/Estimate.module.scss'
 import { uuid } from 'uuidv4';
 import useFetch from 'use-http';
 import { useState} from 'react';
-
+import update from 'react-addons-update'
 
 export default function EstimatIssue({projects,setProjects}) {
    
@@ -19,7 +19,7 @@ export default function EstimatIssue({projects,setProjects}) {
 useEffect(() => {
     getProjects();
     let members = ["Axel", "Emma", "Sandra", "Sara K", "Sara M"];
-        setMembers(members);
+    setMembers(members);
 }, [newmembersDetails])
 
 const getProjects = () => {
@@ -29,53 +29,74 @@ const getProjects = () => {
             setOneProject(data);
            
         })
+        
 };
-console.log(oneProject);
 
+console.log(oneProject);
+console.log(projects);
 //FUNCTION THAT ONCHANG INPUT WILL RUN 
-      
+
             const addEstimateTime=(event)=>{
                 if(newmembersDetails.estTimeMember && newmembersDetails.memberId ){ 
-                event.preventDefault();
+              
                         console.log('id of button',event.target.id);
                         console.log(newmembersDetails);
-                        console.log(oneProject);
-                        setOneProject(preProject=>{
-                                   
-                                        if(typeof(preProject.issueList=='object')){
-                                            console.log('issue list',preProject.issueList);
-                                            preProject.issueList.filter(issueList=>issueList.issueId==event.target.id).map((issueId)=>{
-                                                console.log('issue id that is equal to button id',issueId);
-                                              issueId.members.push({memberId:newmembersDetails.memberId,estTimeMember:newmembersDetails.estTimeMember})
-                                             console.log(issueId.members);
+                                        if(typeof(oneProject.issueList=='object')){
+                                            console.log('issue list',oneProject.issueList);
+                                            oneProject.issueList.filter(issueList=>issueList.issueId==event.target.id).map(issue=>{
+                                            let newProject=[...issue.members]
+                                            issue.members.push({memberId:newmembersDetails.memberId,estTimeMember:newmembersDetails.estTimeMember})
+                                           setOneProject(newProject)
                                             //?????????
-                                            
-                             
-                                            })
-                                        }
-                                     
-                        })
-                           patch ('/projects/1',{projects:oneProject})
-                            .then((preProject)=>{
-                                console.log('old',preProject);
-                                console.log('new',oneProject)
-                               // preProject.filter(preProject.id==1).map(preProject=>return console.log('pre project id 1:',preProject);})
-                            
-
-                            }
-                                    
                                            
-                                            ) 
-                                      
-                               
-                               
-                                     
-                 }else
+                                           
+                                         })
+                                        }
+                   
+                      console.log(oneProject);
+                      patch('/projects',{projects:oneProject})
+                      .then((data)=>{
+                          
+                          data=oneProject;
+                      })
+                    //   setProjects(update(projects, {
+                    //     projects: {
+                    //         [0]: {oneProject}
+                           
+                    //     }
+                    // }));
+                        //    patch ('/projects/1',{projects:oneProject})
+                        //     .then((preProject)=>{
+                        //         console.log('old',preProject);
+                        //         console.log('new',oneProject)
+                               // preProject.filter(preProject.id==1).map(preProject=>return console.log('pre project id 1:',preProject);})
+                         //}
+                       // ) 
+              }else
                                      alert('Member is not selected or time is not entered ') ;      
-                                    
-                                
-                      
-                }
+            }
+         useEffect(()=>{
+            fetch('http://localhost:3000/projects',{
+                method: 'PUT',
+                headers:{
+                'Content-Type':'application/json'
+                },
+                body: JSON.stringify(oneProject)
+            })
+            .then(res=>res.json())
+              .then(data=>{
+                  console.log('from patch',data);
+                    let TempArray= projects.filter(projects=>projects.id!=1)
+                     TempArray.push(oneProject)
+                   setProjects(TempArray)
+
+                     console.log('TempArray',TempArray);
+                     
+                 })
+         },[setProjects]) 
+            
+                
+            
                 
                 //??????
         //         useEffect(() => {
@@ -119,7 +140,7 @@ console.log(oneProject);
        
         <>
         <div>
-      {projects.filter(project=>project.id==1).map((project) => <div><h1>{project.projectName}</h1></div>)}
+      {projects.filter(project=>project.id===1).map((project) => <div><h1>{project.projectName}</h1></div>)}
       </div>
        
       
@@ -136,9 +157,9 @@ console.log(oneProject);
                </thead>
                <tbody>
                  
-                   {projects.filter(project=>project.id==1).map((project) => <div>
+                   {projects.filter(project=>project.id===1).map((project) => <div>
                     {
-                (typeof(project.issueList)=='object')?
+                (typeof(project.issueList)==='object')?
                                         
                                         
                 <div key={uuid}>
