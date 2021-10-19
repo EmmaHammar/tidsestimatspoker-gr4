@@ -55,32 +55,38 @@
            cursor: pointer;
            outline: 1px solid rgb(155, 155, 155);
            background-color: rgb(210, 210, 210);
+           
            &:hover{
-            background-color: rgb(161, 164, 157);
+                background-color: rgb(161, 164, 157);
+            }
         }
-        }
-    
-        
-
     }
 
 
-    .issueList{
-       display: flex;
-       flex-direction: column;
+    .issueContainer{
        outline: 1px solid black; 
        padding: 2rem 5rem;
 
-       div{
+       .issueList{
            display: flex;
            justify-content: space-between;
-           align-items: center;         
+           flex-direction: column; 
+           
+           div{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start; 
+
+            p{
+                margin-right: 2rem;
+            }
+
+            input{
+                width: 2rem;
+            }
+           }
        }
-    
     }
-
-    
-
 }
 
 

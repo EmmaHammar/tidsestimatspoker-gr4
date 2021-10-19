@@ -1,6 +1,6 @@
 import React, { useContext} from 'react'
 import styles from './InputIssue.module.scss'
-import { InputContext} from '../../../context/context'
+import { InputContext} from '../../../context/formContext'
 
 export default function InputIssue({title, property}) {
 
