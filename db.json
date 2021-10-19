@@ -1,185 +1,352 @@
 {
   "projects": [
     {
+      "id": 1,
       "projectName": "Project A",
-      "projectId": 1,
       "projectDesc": "A project description is a high-level overview of why you're doing a project. The document explains a project's objectives and its essential qualities. ... The project description should include an overview of the following: Project goals and objectives. Stakeholders and their roles",
-      "estComplete": true,
+      "estComplete": "",
+      "participants": [
+        {
+          "id": "c6f2fdf6-2b68-4f62-b394-53aa84119cfe",
+          "name": "Axel",
+          "color": "#ce0f3d",
+          "estTime": 0
+        },
+        {
+          "id": "0a20e65e-19cb-4d2c-bc2d-b9517083616f",
+          "name": "Emma",
+          "color": "#feb72b",
+          "estTime": 0
+        },
+        {
+          "id": "0fc202cc-20dd-4bc4-841d-3a713ba16f84",
+          "name": "Sara M",
+          "color": "#edffea",
+          "estTime": 0
+        },
+        {
+          "id": "ffa17157-3f1d-423a-8012-8c19283694c7",
+          "name": "Sandra",
+          "color": "#ce0f3d",
+          "estTime": 0
+        },
+        {
+          "id": "f23b31fe-978b-4b3c-bea1-1ed6c78f10a2",
+          "name": "Sara K",
+          "color": "#ffc6c7",
+          "estTime": 0
+        }
+      ],
       "issueList": [
         {
-          "issueId": 1,
-          "title": "X",
-          "result": 0,
-          "estMembers": [
+          "id": "4160e0e3-eaba-4e3a-85bd-8cc6f81ccf57",
+          "issueTitle": "Fixa projekt sida",
+          "desc": "Fixa projekt sidan så den ser bra ut",
+          "color": "#b7efcd",
+          "participants": [
             {
-              "memberId": 1,
-              "estTimeMember": 0
-            }, {
-              "memberId": 2,
-              "estTimeMember": 0
-            }, {
-              "memberId": 3,
-              "estTimeMember": 0
-            }, {
-              "memberId": 4,
-              "estTimeMember": 0
-            }, {
-              "memberId": 5,
-              "estTimeMember": 0
+              "id": "c6f2fdf6-2b68-4f62-b394-53aa84119cfe",
+              "name": "Axel",
+              "color": "#ce0f3d",
+              "estTime": 0
+            },
+            {
+              "id": "0a20e65e-19cb-4d2c-bc2d-b9517083616f",
+              "name": "Emma",
+              "color": "#feb72b",
+              "estTime": 0
+            },
+            {
+              "id": "0fc202cc-20dd-4bc4-841d-3a713ba16f84",
+              "name": "Sara M",
+              "color": "#edffea",
+              "estTime": 0
+            },
+            {
+              "id": "ffa17157-3f1d-423a-8012-8c19283694c7",
+              "name": "Sandra",
+              "color": "#ce0f3d",
+              "estTime": 0
+            },
+            {
+              "id": "f23b31fe-978b-4b3c-bea1-1ed6c78f10a2",
+              "name": "Sara K",
+              "color": "#ffc6c7",
+              "estTime": 0
             }
           ]
-        }, {
-          "issueId": 2,
-          "title": "X",
-          "result": 0,
-          "estMembers": [
+        },
+        {
+          "id": "e136d128-26d6-46f3-9cca-b4085dd6410c",
+          "issueTitle": "Skapa Calculate komponent",
+          "desc": "Calculate ska ha 3 funktioner",
+          "color": "#ffc6c7",
+          "participants": [
             {
-              "memberId": 1,
-              "estTimeMember": 0
-            }, {
-              "memberId": 2,
-              "estTimeMember": 0
-            }, {
-              "memberId": 3,
-              "estTimeMember": 0
-            }, {
-              "memberId": 4,
-              "estTimeMember": 0
-            }, {
-              "memberId": 5,
-              "estTimeMember": 0
-            }
-          ]
-        }, {
-          "issueId": 3,
-          "title": "X",
-          "result": 0,
-          "estMembers": [
+              "id": "c6f2fdf6-2b68-4f62-b394-53aa84119cfe",
+              "name": "Axel",
+              "color": "#ce0f3d",
+              "estTime": 0
+            },
             {
-              "memberId": 1,
-              "estTimeMember": 0
-            }, {
-              "memberId": 2,
-              "estTimeMember": 0
-            }, {
-              "memberId": 3,
-              "estTimeMember": 0
-            }, {
-              "memberId": 4,
-              "estTimeMember": 0
-            }, {
-              "memberId": 5,
-              "estTimeMember": 0
+              "id": "0a20e65e-19cb-4d2c-bc2d-b9517083616f",
+              "name": "Emma",
+              "color": "#feb72b",
+              "estTime": 0
+            },
+            {
+              "id": "0fc202cc-20dd-4bc4-841d-3a713ba16f84",
+              "name": "Sara M",
+              "color": "#edffea",
+              "estTime": 0
+            },
+            {
+              "id": "ffa17157-3f1d-423a-8012-8c19283694c7",
+              "name": "Sandra",
+              "color": "#ce0f3d",
+              "estTime": 0
+            },
+            {
+              "id": "f23b31fe-978b-4b3c-bea1-1ed6c78f10a2",
+              "name": "Sara K",
+              "color": "#ffc6c7",
+              "estTime": 0
             }
           ]
         }
       ]
-    }, {
+    },
+    {
+      "id": 2,
       "projectName": "Project B",
-      "projectId": 2,
       "projectDesc": "React (also known as React.js or ReactJS) is a free and open-source front-end JavaScript library[3] for building user interfaces or UI components. It is maintained by Facebook and a community of individual developers and companies.[4][5][6] React can be used as a base in the development of single-page or mobile applications.",
-      "estComplete": false,
+      "estComplete": "",
+      "participants": [
+        {
+          "id": "91c22538-0c7b-42e8-93b4-2914f1695da8",
+          "name": "Axel",
+          "color": "#ffe75e",
+          "estTime": 0
+        },
+        {
+          "id": "7dd1fcd5-c648-4cd2-84fc-f4f85ad9be53",
+          "name": "Emma",
+          "color": "#dab8f3",
+          "estTime": 0
+        },
+        {
+          "id": "bef0fca1-c61e-4216-88a9-d527670211fd",
+          "name": "Sara M",
+          "color": "#ffc6c7",
+          "estTime": 0
+        },
+        {
+          "id": "b930e0a8-b7ea-420d-9195-c8981ee33a90",
+          "name": "Sandra",
+          "color": "#b7efcd",
+          "estTime": 0
+        },
+        {
+          "id": "53be8963-1538-4852-9eac-c26c4b329075",
+          "name": "Sara K",
+          "color": "#4cd3c2",
+          "estTime": 0
+        }
+      ],
       "issueList": [
         {
-          "issueId": 1,
-          "title": "X",
-          "result": 0,
-          "estMembers": [
+          "id": "99e5b5b6-a4cc-428d-8964-fb7b9f4e0bb2",
+          "issueTitle": "Lägga till Header",
+          "desc": "Header ska ha råsa styling",
+          "color": "#9399ff",
+          "participants": [
             {
-              "memberId": 1,
-              "estTimeMember": 0
-            }, {
-              "memberId": 2,
-              "estTimeMember": 0
-            }, {
-              "memberId": 3,
-              "estTimeMember": 0
-            }, {
-              "memberId": 4,
-              "estTimeMember": 0
-            }, {
-              "memberId": 5,
-              "estTimeMember": 0
+              "id": "91c22538-0c7b-42e8-93b4-2914f1695da8",
+              "name": "Axel",
+              "color": "#ffe75e",
+              "estTime": 0
+            },
+            {
+              "id": "7dd1fcd5-c648-4cd2-84fc-f4f85ad9be53",
+              "name": "Emma",
+              "color": "#dab8f3",
+              "estTime": 0
+            },
+            {
+              "id": "bef0fca1-c61e-4216-88a9-d527670211fd",
+              "name": "Sara M",
+              "color": "#ffc6c7",
+              "estTime": 0
+            },
+            {
+              "id": "b930e0a8-b7ea-420d-9195-c8981ee33a90",
+              "name": "Sandra",
+              "color": "#b7efcd",
+              "estTime": 0
+            },
+            {
+              "id": "53be8963-1538-4852-9eac-c26c4b329075",
+              "name": "Sara K",
+              "color": "#4cd3c2",
+              "estTime": 0
             }
           ]
-        }, {
-          "issueId": 2,
-          "title": "X",
-          "result": 0,
-          "estMembers": [
+        },
+        {
+          "id": "df083c19-02ca-4e82-a154-7f5e3472b032",
+          "issueTitle": "Fixa Footer",
+          "desc": "Footern ska vara sticky",
+          "color": "#e85f99",
+          "participants": [
             {
-              "memberId": 1,
-              "estTimeMember": 0
-            }, {
-              "memberId": 2,
-              "estTimeMember": 0
-            }, {
-              "memberId": 3,
-              "estTimeMember": 0
-            }, {
-              "memberId": 4,
-              "estTimeMember": 0
-            }, {
-              "memberId": 5,
-              "estTimeMember": 0
-            }
-          ]
-        }, {
-          "issueId": 3,
-          "title": "X",
-          "result": 0,
-          "estMembers": [
+              "id": "91c22538-0c7b-42e8-93b4-2914f1695da8",
+              "name": "Axel",
+              "color": "#ffe75e",
+              "estTime": 0
+            },
             {
-              "memberId": 1,
-              "estTimeMember": 0
-            }, {
-              "memberId": 2,
-              "estTimeMember": 0
-            }, {
-              "memberId": 3,
-              "estTimeMember": 0
-            }, {
-              "memberId": 4,
-              "estTimeMember": 0
-            }, {
-              "memberId": 5,
-              "estTimeMember": 0
+              "id": "7dd1fcd5-c648-4cd2-84fc-f4f85ad9be53",
+              "name": "Emma",
+              "color": "#dab8f3",
+              "estTime": 0
+            },
+            {
+              "id": "bef0fca1-c61e-4216-88a9-d527670211fd",
+              "name": "Sara M",
+              "color": "#ffc6c7",
+              "estTime": 0
+            },
+            {
+              "id": "b930e0a8-b7ea-420d-9195-c8981ee33a90",
+              "name": "Sandra",
+              "color": "#b7efcd",
+              "estTime": 0
+            },
+            {
+              "id": "53be8963-1538-4852-9eac-c26c4b329075",
+              "name": "Sara K",
+              "color": "#4cd3c2",
+              "estTime": 0
             }
           ]
         }
       ]
-    },  {
+    },
+    {
+      "id": 3,
       "projectName": "Project C",
-      "projectId": 2,
       "projectDesc": "React (also known as React.js or ReactJS) is a free and open-source front-end JavaScript library[3] for building user interfaces or UI components. It is maintained by Facebook and a community of individual developers and companies",
-      "estComplete": true,
+      "estComplete": "",
+      "participants": [
+        {
+          "id": "98d577b3-ce55-4eb5-8a0e-96d152eaf961",
+          "name": "Axel",
+          "color": "#fa744f",
+          "estTime": 0
+        },
+        {
+          "id": "97b1cfd7-2c46-4863-af0a-40ca5a20abe5",
+          "name": "Emma",
+          "color": "#4cd3c2",
+          "estTime": 0
+        },
+        {
+          "id": "150c852a-28ee-465e-95cd-9fd1d4adb534",
+          "name": "Sara M",
+          "color": "#ffe75e",
+          "estTime": 0
+        },
+        {
+          "id": "c7595149-cd22-40d4-a6e4-147440e56efb",
+          "name": "Sandra",
+          "color": "#ce0f3d",
+          "estTime": 0
+        },
+        {
+          "id": "8c3e7245-c59b-4fc9-9b5e-85a2d4ad6d6c",
+          "name": "Sara K",
+          "color": "#e85f99",
+          "estTime": 0
+        }
+      ],
       "issueList": [
         {
-          "issueId": 1,
-          "title": "X",
-          "result": 0,
-          "estMembers": [
+          "id": "062e8251-b649-4db3-aa5f-d51c336b3077",
+          "issueTitle": "Skapa estimeringslista",
+          "desc": "estimeringslistan ska innehålla våra estimeringar",
+          "color": "#ffbcbc",
+          "participants": [
             {
-              "memberId": 1,
-              "estTimeMember": 0
-            }, {
-              "memberId": 2,
-              "estTimeMember": 0
-            }, {
-              "memberId": 3,
-              "estTimeMember": 0
-            }, {
-              "memberId": 4,
-              "estTimeMember": 0
-            }, {
-              "memberId": 5,
-              "estTimeMember": 0
+              "id": "98d577b3-ce55-4eb5-8a0e-96d152eaf961",
+              "name": "Axel",
+              "color": "#fa744f",
+              "estTime": 0
+            },
+            {
+              "id": "97b1cfd7-2c46-4863-af0a-40ca5a20abe5",
+              "name": "Emma",
+              "color": "#4cd3c2",
+              "estTime": 0
+            },
+            {
+              "id": "150c852a-28ee-465e-95cd-9fd1d4adb534",
+              "name": "Sara M",
+              "color": "#ffe75e",
+              "estTime": 0
+            },
+            {
+              "id": "c7595149-cd22-40d4-a6e4-147440e56efb",
+              "name": "Sandra",
+              "color": "#ce0f3d",
+              "estTime": 0
+            },
+            {
+              "id": "8c3e7245-c59b-4fc9-9b5e-85a2d4ad6d6c",
+              "name": "Sara K",
+              "color": "#e85f99",
+              "estTime": 0
+            }
+          ]
+        },
+        {
+          "id": "6d39991c-c735-412d-b918-a4489d6642e0",
+          "issueTitle": "Uppdatera databasstruktur",
+          "desc": "databasstrukturen ska va så simpel som möjligt",
+          "color": "#b7efcd",
+          "participants": [
+            {
+              "id": "98d577b3-ce55-4eb5-8a0e-96d152eaf961",
+              "name": "Axel",
+              "color": "#fa744f",
+              "estTime": 0
+            },
+            {
+              "id": "97b1cfd7-2c46-4863-af0a-40ca5a20abe5",
+              "name": "Emma",
+              "color": "#4cd3c2",
+              "estTime": 0
+            },
+            {
+              "id": "150c852a-28ee-465e-95cd-9fd1d4adb534",
+              "name": "Sara M",
+              "color": "#ffe75e",
+              "estTime": 0
+            },
+            {
+              "id": "c7595149-cd22-40d4-a6e4-147440e56efb",
+              "name": "Sandra",
+              "color": "#ce0f3d",
+              "estTime": 0
+            },
+            {
+              "id": "8c3e7245-c59b-4fc9-9b5e-85a2d4ad6d6c",
+              "name": "Sara K",
+              "color": "#e85f99",
+              "estTime": 0
             }
           ]
         }
       ]
     }
-    
   ]
-
 }

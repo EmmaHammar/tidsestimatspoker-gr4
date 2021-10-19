@@ -1,15 +1,18 @@
 import React from 'react'
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import Form from '../containers/Form/Form'
+import { InputProvider} from '../context/context'
+import { useLocation } from 'react-router-dom'
 
 export default function AddProject() {
+
+    const location = useLocation()
+    const { projects } = location.state
+
+    console.log(projects)
+
     return (
-        <>
-        <Header />
-            <button>
-                Add Project
-            </button>
-        <Footer />
-        </>
+        <InputProvider>  
+            <Form/>
+        </InputProvider>
     )
 };
