@@ -36,7 +36,7 @@ function App() {
           <AddProject />
         </Route>
         <Route exact path="/Project">
-          <Project />
+          <Project projects={projects}/>
         </Route>
       </Switch>
     <Footer/>
