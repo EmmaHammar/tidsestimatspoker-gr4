@@ -1,10 +1,12 @@
-import React, {useState}  from 'react'
+import React, {useState,useContext}  from 'react'
 import styles from './ProjectList.module.scss'
 import { v4 as uuid } from 'uuid'
 import {Link} from 'react-router-dom'
-import { useLocation } from 'react-router-dom'
+import { ProjectContext} from '../../context/projectsContext'
+    
+export default function ProjectList() {
 
-export default function ProjectList({projects}) {
+    let { projects, setProjects} = useContext(ProjectContext);
 
     const [selected, setSelected] = useState(null);
 
@@ -22,7 +24,8 @@ export default function ProjectList({projects}) {
 
             <div className={styles.listHeader}>
                 <h2>Projects</h2>
-                <Link to={{pathname: '/AddProject',state: {projects: projects}}}>
+    
+                <Link to="/AddProject" style={{ textDecoration: 'none' }}>
                     <button>  Add Project </button>  
                 </Link>
             </div>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react'
 import styles from './IssueEdit.module.scss'
-import { InputContext} from '../../../context/context'
+import { InputContext} from '../../../context/formContext'
 
 export default function IssueEdit({updateInput}) {
 
