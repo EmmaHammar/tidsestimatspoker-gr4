@@ -1,7 +1,7 @@
 import React, {useContext} from 'react'
 import styles from './Confirmation.module.scss'
 import { v4 as uuid } from 'uuid'
-import { InputContext} from '../../../context/context'
+import { InputContext} from '../../../context/formContext'
 
 export default function Confirmation({input, addInput}) {
 

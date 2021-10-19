@@ -1,6 +1,7 @@
 import React, {useState, useContext} from 'react'
 import styles from './Form.module.scss'
-import { InputContext} from '../../context/context'
+import { InputContext} from '../../context/formContext'
+import { ProjectContext} from '../../context/projectsContext'
 import useFetch from 'use-http';
 
 import { 
@@ -15,6 +16,8 @@ import {
 
 export default function Form() {
 
+let { projects, setProjects} = useContext(ProjectContext);
+
 let { emptyParticipants, emptyIssues, toggle, setToggle} = useContext(InputContext);
 
     const {post} = useFetch("http://localhost:3000");
@@ -23,7 +26,7 @@ let { emptyParticipants, emptyIssues, toggle, setToggle} = useContext(InputConte
         id: '',
         projectName: '',
         projectDesc: '',
-        estComplete:'',
+        estComplete:'false',
         participants:[],
         issueList: []
         };
@@ -79,15 +82,28 @@ let { emptyParticipants, emptyIssues, toggle, setToggle} = useContext(InputConte
         
         setProject({...project, issueList: update})
     }
+    
+    //Add object to State
+    const addProjectState =(newProject) => {
+
+        const array = [...projects]
+
+        console.log(array)
+
+        array.push(newProject);
+        setProjects(array) 
+    }  
 
     //Add object to DB
-    const addIssueDb =(event) => {
+    const addProjectDb =(event) => {
         event.preventDefault();
-        const newTodo = project
-        post("/projects/", newTodo)
+        const newProject = project
+        post("/projects/", newProject)
         .then(data => {
             //Logs out saved data
             console.log(data)
+            //Update State
+            addProjectState(newProject)
             //Empty State
             setProject(initialValues)
             //Toggle EditBox
@@ -97,7 +113,7 @@ let { emptyParticipants, emptyIssues, toggle, setToggle} = useContext(InputConte
   
     return (
         <div className={styles.formWrapper}>
-            <form onSubmit={addIssueDb} 
+            <form onSubmit={addProjectDb} 
                 onKeyPress={(e) => { e.key === 'Enter' && e.preventDefault(); }}
             >
             
