@@ -10,25 +10,9 @@
           "issueId": 1,
           "title": "App.js",
           "result": 0,
-          "members": [
-            {
-              "memberId": 1,
-              "estTimeMember": 0
-            }, {
-              "memberId": 2,
-              "estTimeMember": 0
-            }, {
-              "memberId": 3,
-              "estTimeMember": 0
-            }, {
-              "memberId": 4,
-              "estTimeMember": 0
-            }, {
-              "memberId": 5,
-              "estTimeMember": 0
-            }
-          ]
-        }, {
+          "members": []
+        },
+        {
           "issueId": 2,
           "title": "Calculate.js",
           "result": 0,
@@ -36,21 +20,26 @@
             {
               "memberId": 1,
               "estTimeMember": 0
-            }, {
+            },
+            {
               "memberId": 2,
               "estTimeMember": 0
-            }, {
+            },
+            {
               "memberId": 3,
               "estTimeMember": 0
-            }, {
+            },
+            {
               "memberId": 4,
               "estTimeMember": 0
-            }, {
+            },
+            {
               "memberId": 5,
               "estTimeMember": 0
             }
           ]
-        }, {
+        },
+        {
           "issueId": 3,
           "title": "Addproject.js",
           "result": 0,
@@ -58,23 +47,28 @@
             {
               "memberId": 1,
               "estTimeMember": 0
-            }, {
+            },
+            {
               "memberId": 2,
               "estTimeMember": 0
-            }, {
+            },
+            {
               "memberId": 3,
               "estTimeMember": 0
-            }, {
+            },
+            {
               "memberId": 4,
               "estTimeMember": 0
-            }, {
+            },
+            {
               "memberId": 5,
               "estTimeMember": 0
             }
           ]
         }
       ]
-    }, {
+    },
+    {
       "projectName": "Project B",
       "id": 2,
       "projectDesc": "React (also known as React.js or ReactJS) is a free and open-source front-end JavaScript library[3] for building user interfaces or UI components. It is maintained by Facebook and a community of individual developers and companies.[4][5][6] React can be used as a base in the development of single-page or mobile applications.",
@@ -88,21 +82,26 @@
             {
               "memberId": 1,
               "estTimeMember": 0
-            }, {
+            },
+            {
               "memberId": 2,
               "estTimeMember": 0
-            }, {
+            },
+            {
               "memberId": 3,
               "estTimeMember": 0
-            }, {
+            },
+            {
               "memberId": 4,
               "estTimeMember": 0
-            }, {
+            },
+            {
               "memberId": 5,
               "estTimeMember": 0
             }
           ]
-        }, {
+        },
+        {
           "issueId": 2,
           "title": "X",
           "result": 0,
@@ -110,21 +109,26 @@
             {
               "memberId": 1,
               "estTimeMember": 0
-            }, {
+            },
+            {
               "memberId": 2,
               "estTimeMember": 0
-            }, {
+            },
+            {
               "memberId": 3,
               "estTimeMember": 0
-            }, {
+            },
+            {
               "memberId": 4,
               "estTimeMember": 0
-            }, {
+            },
+            {
               "memberId": 5,
               "estTimeMember": 0
             }
           ]
-        }, {
+        },
+        {
           "issueId": 3,
           "title": "X",
           "result": 0,
@@ -132,23 +136,28 @@
             {
               "memberId": 1,
               "estTimeMember": 0
-            }, {
+            },
+            {
               "memberId": 2,
               "estTimeMember": 0
-            }, {
+            },
+            {
               "memberId": 3,
               "estTimeMember": 0
-            }, {
+            },
+            {
               "memberId": 4,
               "estTimeMember": 0
-            }, {
+            },
+            {
               "memberId": 5,
               "estTimeMember": 0
             }
           ]
         }
       ]
-    },  {
+    },
+    {
       "projectName": "Project C",
       "id": 2,
       "projectDesc": "React (also known as React.js or ReactJS) is a free and open-source front-end JavaScript library[3] for building user interfaces or UI components. It is maintained by Facebook and a community of individual developers and companies",
@@ -162,16 +171,20 @@
             {
               "memberId": 1,
               "estTimeMember": 0
-            }, {
+            },
+            {
               "memberId": 2,
               "estTimeMember": 0
-            }, {
+            },
+            {
               "memberId": 3,
               "estTimeMember": 0
-            }, {
+            },
+            {
               "memberId": 4,
               "estTimeMember": 0
-            }, {
+            },
+            {
               "memberId": 5,
               "estTimeMember": 0
             }
@@ -179,7 +192,5 @@
         }
       ]
     }
-    
   ]
-
 }

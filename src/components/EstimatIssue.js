@@ -4,16 +4,19 @@ import styles from '../styles/Estimate.module.scss'
 import { uuid } from 'uuidv4';
 import useFetch from 'use-http';
 import { useState} from 'react';
-import update from 'react-addons-update'
+
 
 export default function EstimatIssue({projects,setProjects}) {
    
-        const { get,patch} = useFetch("http://localhost:3000");
+        const { get,patch,post} = useFetch("http://localhost:3000");
+        // Selected project
         const [oneProject,setOneProject]=useState([])
-        
+        //Members name 
         const [members, setMembers] = useState([]);
+        //Temp Array 
         const [TempArray,setTempArray]=useState([]);
-      // const [newmembersDetails,setnewmembersDetails]=useState({memberId:"",estTimeMember:""});
+        const[memberInfo,setMemberinfo]=useState([])
+        //object with memeberId and estimateTime
        const [newmembersDetails,setnewmembersDetails]=useState([]);
 //FETCH SELECTED PROJECT DATA 
 useEffect(() => {
@@ -32,109 +35,66 @@ const getProjects = () => {
         
 };
 
-console.log(oneProject);
-console.log(projects);
+
 //FUNCTION THAT ONCHANG INPUT WILL RUN 
-
-            const addEstimateTime=(event)=>{
-                if(newmembersDetails.estTimeMember && newmembersDetails.memberId ){ 
-              
-                        console.log('id of button',event.target.id);
-                        console.log(newmembersDetails);
-                                        if(typeof(oneProject.issueList=='object')){
-                                            console.log('issue list',oneProject.issueList);
-                                            oneProject.issueList.filter(issueList=>issueList.issueId==event.target.id).map(issue=>{
-                                            let newProject=[...issue.members]
-                                            issue.members.push({memberId:newmembersDetails.memberId,estTimeMember:newmembersDetails.estTimeMember})
-                                           setOneProject(newProject)
-                                            //?????????
-                                           
-                                           
-                                         })
-                                        }
-                   
-                      console.log(oneProject);
-                      patch('/projects',{projects:oneProject})
-                      .then((data)=>{
-                          
-                          data=oneProject;
-                      })
-                    //   setProjects(update(projects, {
-                    //     projects: {
-                    //         [0]: {oneProject}
-                           
-                    //     }
-                    // }));
-                        //    patch ('/projects/1',{projects:oneProject})
-                        //     .then((preProject)=>{
-                        //         console.log('old',preProject);
-                        //         console.log('new',oneProject)
-                               // preProject.filter(preProject.id==1).map(preProject=>return console.log('pre project id 1:',preProject);})
-                         //}
-                       // ) 
-              }else
-                                     alert('Member is not selected or time is not entered ') ;      
-            }
-         useEffect(()=>{
-            fetch('http://localhost:3000/projects',{
-                method: 'PUT',
-                headers:{
-                'Content-Type':'application/json'
-                },
-                body: JSON.stringify(oneProject)
-            })
-            .then(res=>res.json())
-              .then(data=>{
-                  console.log('from patch',data);
-                    let TempArray= projects.filter(projects=>projects.id!=1)
-                     TempArray.push(oneProject)
-                   setProjects(TempArray)
-
-                     console.log('TempArray',TempArray);
-                     
+const addEstimateTime=(event)=>{
+    if(newmembersDetails.estTimeMember && newmembersDetails.memberId ){ 
+  
+            console.log('id of button',event.target.id);
+            console.log(newmembersDetails);
+            if(typeof(oneProject.issueList=='object')){
+                 oneProject.issueList.filter(issueList=>issueList.issueId==event.target.id).map(issue=>{
+                     const newMembers=[...issue.members] 
+                     newMembers.push(newmembersDetails)
+                     setOneProject({...oneProject.issueList.issue,members:newMembers})  
                  })
-         },[setProjects]) 
-            
-                
-            
-                
-                //??????
-        //         useEffect(() => {
-        //         patch ('/projects/1',{projects:oneProject})
-        //         .then((preProject)=>{
-        //             console.log('old',preProject);
-        //             console.log('new',oneProject);}
-        //    )} ,[] )
-//FUNCTION FOR DEVIDIND THE SPECIFIC ISSUE DETAILS       
-        // const devideIssue=()=>{
-        //     console.log(oneProject);
-        //     console.log('array of est members',members);
-            
-        //      if(typeof(members=='object')){
-        //         members.filter(issueId=>issueId.issueId==11).map((issueId)=>
-                  
-        //         <div>
-        //         {setTempArray(prevTemp=>[...prevTemp,{memberId:issueId.memberId,estTimeMember:issueId.estTimeMember}])}</div>)
-        //                 console.log('TemArray',TempArray);
+                         
+                }
+       
+          
+  }else
+                         alert('Member is not selected or time is not entered ') ;      
+}
+
+console.log('oneProject',oneProject);
+console.log('project',projects);
+            // const addEstimateTime=(event)=>{
+            //     if(newmembersDetails.estTimeMember && newmembersDetails.memberId ){ 
+              
+            //             console.log('id of button',event.target.id);
+            //             console.log(newmembersDetails);
+            //                             if(typeof(oneProject.issueList=='object')){
+            //                                 console.log('issue list',oneProject.issueList);
+            //                                 oneProject.issueList.filter(issueList=>issueList.issueId==event.target.id).map(issue=>{
+            //                                 let newProject=[...issue.members]
+            //                                 issue.members.push({memberId:newmembersDetails.memberId,estTimeMember:newmembersDetails.estTimeMember})
+            //                                setOneProject(newProject)
+                                            
+                                           
+                                           
+            //                              })
+            //                             }
                    
-
-        //              setOneProject(oneProject=>{
-
-        //                 if(typeof(oneProject.issueList=='object')){return oneProject.issueList.filter(goToIssueId=>goToIssueId.issueId==11 ). map((goToIssueId,k)=>{
-        //                    console.log(goToIssueId)
-        //                 goToIssueId.members={TempArray}
-        //                 }
-                        
-        //             )}
-        //             })
-                     
-                 
-                  
-        //      }
-
-                 
-        // }
-      
+            //           console.log(oneProject);
+            //           patch('/projects/1',{members:newmembersDetails})
+            //           .then((data)=>{
+            //               if(typeof(data.issueList=='object')){
+            //                   data.issueList.filter(issueList=>issueList.issueId==event.target.id).map(issue=>{
+            //                     {setTempArray(prevTemp=>[...prevTemp,{memberId:newmembersDetails.memberId,estTimeMember:newmembersDetails.estTimeMember}])}
+                               
+            //                     let newMember=[...issue.members] 
+            //                     issue.members.push(newmembersDetails)
+                              
+            //                   })
+            //               }
+                          
+            //           })
+                   
+                      
+            //   }else
+            //                          alert('Member is not selected or time is not entered ') ;      
+            // }
+            // console.log(TempArray);
         
     return (
        
@@ -177,7 +137,7 @@ console.log(projects);
                  
                </tbody>
            </table>
-         { /* <button onClick={devideIssue}>devide</button>*/}
+        
         </div>
         
          </>
