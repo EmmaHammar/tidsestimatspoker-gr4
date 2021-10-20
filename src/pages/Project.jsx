@@ -18,8 +18,8 @@ export default function Project({projects}) {
       
         
         let newEstTime=[...estTimeInfo,{name: newmembersDetails.name, estTime: newmembersDetails.estTime, issueId: newmembersDetails.issueId}]
-       setTimeIfo(newEstTime)
-        
+       setTimeIfo(newEstTime);
+       
         // console.log(newEstTime);
 
         // console.log(estTimeInfo);
@@ -47,7 +47,8 @@ export default function Project({projects}) {
       
            console.log(project.issueList);
            project.issueList.map((issueList)=>{
-            patch('/projects/'+projectId,{issueDetail:estTimeInfo})
+            patch('/projects/'+projectId,{issueDetail:estTimeInfo},
+            )
                 .then(data=>{
                     console.log(data);
                 
@@ -65,15 +66,18 @@ export default function Project({projects}) {
 
 
        console.log('issue1',issue1);
-       
-        
-     
+       console.log(issue1.length);
+       if(issue1.length==5){
+           console.log('issue1 ok');
+          
+       }else console.log('issue1 not ok');
+       console.log('issue2',issue2);   
+       if(issue2.length==5){
+        console.log('issue2 ok');
+    }else console.log(' issue2not ok');
       
        
-          let estTimeIssue1=0
         
-          console.log(estTimeIssue1);
-       
        
    
    }
@@ -114,6 +118,8 @@ export default function Project({projects}) {
                         <p> {issue.issueTitle}</p>
                         <input  type="number"  id={i+1}  onChange={(event)=>setnewmembersDetails(previousState=>{return{...previousState,estTime:event.target.value,issueId:event.target.id}})} />
                         <button onClick={addTime} id={issue.id}>Add your time </button>
+                       
+
                     </div>
                 ))}
             </div>

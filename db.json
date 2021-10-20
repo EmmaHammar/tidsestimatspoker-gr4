@@ -7,7 +7,7 @@
       "estComplete": "",
       "participants": [
         {
-          "id": "c6f2fdf6-2b68-4f62-b394-53aa84119cfe",
+          "id": 1,
           "name": "Axel",
           "color": "#ce0f3d",
           "estTime": 0
@@ -129,6 +129,31 @@
         {
           "name": "Sara M",
           "estTime": "1",
+          "issueId": "1"
+        },
+        {
+          "name": "Sandra",
+          "estTime": "1",
+          "issueId": "1"
+        },
+        {
+          "name": "Sara K",
+          "estTime": "1",
+          "issueId": "1"
+        },
+        {
+          "name": "Axel",
+          "estTime": "2",
+          "issueId": "2"
+        },
+        {
+          "name": "Emma",
+          "estTime": "2",
+          "issueId": "2"
+        },
+        {
+          "name": "Sara M",
+          "estTime": "2",
           "issueId": "2"
         }
       ]
