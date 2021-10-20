@@ -283,7 +283,58 @@
           ]
         }
       ],
-      "issueDetail": []
+      "issueDetail": [
+        {
+          "name": "Axel",
+          "estTime": "1",
+          "issueId": "1"
+        },
+        {
+          "name": "Emma",
+          "estTime": "1",
+          "issueId": "1"
+        },
+        {
+          "name": "Sara M",
+          "estTime": "1",
+          "issueId": "1"
+        },
+        {
+          "name": "Sandra",
+          "estTime": "1",
+          "issueId": "1"
+        },
+        {
+          "name": "Sara K",
+          "estTime": "1",
+          "issueId": "1"
+        },
+        {
+          "name": "Axel",
+          "estTime": "2",
+          "issueId": "2"
+        },
+        {
+          "name": "Emma",
+          "estTime": "2",
+          "issueId": "2"
+        },
+        {
+          "name": "Sara M",
+          "estTime": "2",
+          "issueId": "2"
+        },
+        {
+          "name": "Sandra",
+          "estTime": "2",
+          "issueId": "2"
+        },
+        {
+          "name": "Sara K",
+          "estTime": "2",
+          "issueId": "2"
+        }
+      ]
     },
     {
       "id": 3,

@@ -106,10 +106,7 @@ export default function Project({projects}) {
                 ))}
             </div>
 
-            <div className={styles.addIssue}>
-                <input placeholder="Lägg till ny"></input> 
-                <button> Add Issue</button>
-            </div>
+           
 
             <div className={styles.issueList}>
                 <div>
