@@ -1,9 +1,9 @@
-import React,{useContext, useState} from 'react';
+import React,{useContext} from 'react';
 import { useLocation} from 'react-router-dom'
 import styles from '../styles/Project.module.scss'
 import {ProjectContext }from '../context/projectsContext'
 
-export default function Project() {
+
 import { useState,useEffect } from 'react';
 import useFetch from 'use-http';
 export default function Project({projects}) {
@@ -162,4 +162,3 @@ export default function Project({projects}) {
        
     )
 }
-};

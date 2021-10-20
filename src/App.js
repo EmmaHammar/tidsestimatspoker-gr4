@@ -7,7 +7,7 @@ import Project from './pages/Project'
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import {ProjectProvider }from './context/projectsContext'
-
+import useFetch from 'use-http';
 
 function App() {
   const { get} = useFetch("http://localhost:3000");
