@@ -63,6 +63,14 @@ export default function Project({projects}) {
     let issue1=estTimeInfo.filter(project=>project.issueId==1)
     let issue2=estTimeInfo.filter(project=>project.issueId==2)
     let issue3=estTimeInfo.filter(project=>project.issueId==3)
+    let issue4=estTimeInfo.filter(project=>project.issueId==3)
+    let issue5=estTimeInfo.filter(project=>project.issueId==3)
+    let issue6=estTimeInfo.filter(project=>project.issueId==3)
+    let issue7=estTimeInfo.filter(project=>project.issueId==3)
+    let issue8=estTimeInfo.filter(project=>project.issueId==3)
+    let issue9=estTimeInfo.filter(project=>project.issueId==3)
+    let issue=estTimeInfo.filter(project=>project.issueId==3)
+
 
 
        console.log('issue1',issue1);
@@ -75,7 +83,28 @@ export default function Project({projects}) {
        if(issue2.length==5){
         console.log('issue2 ok');
     }else console.log(' issue2not ok');
-      
+    if(issue3.length==5){
+        console.log('issue3 ok');
+    }else console.log(' issue3 not ok');
+    if(issue4.length==5){
+        console.log('issue4 ok');
+    }else console.log(' issue2not ok');
+    if(issue5.length==5){
+        console.log('issue5 ok');
+    }else console.log(' issue5not ok');
+    if(issue6.length==6){
+        console.log('issue6 ok');
+    }else console.log(' issue6not ok');
+    if(issue7.length==5){
+        console.log('issue7 ok');
+    }else console.log(' issue7not ok');
+    if(issue8.length==5){
+        console.log('issue8 ok');
+    }else console.log(' issue8not ok');
+    if(issue8.length==5){
+        console.log('issue8 ok');
+    }else console.log(' issue8not ok');
+
        
         
        

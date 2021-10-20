@@ -1,0 +1,112 @@
+[33mcommit 2a7041392f57a62c2ca5c519adfd43176693f9a0[m[33m ([m[1;36mHEAD -> [m[1;32mSaraBranchLast#7[m[33m, [m[1;31morigin/SaraBranchLast#7[m[33m)[m
+Author: Sara Sedaghat <75505464+Sarasedaghat8960@users.noreply.github.com>
+Date:   Wed Oct 20 09:56:35 2021 +0200
+
+     devide specified issuesid to a new Array
+
+[33mcommit db61170a2ce712e5ad1503345ff9150b703a9b56[m
+Author: Sara Sedaghat <75505464+Sarasedaghat8960@users.noreply.github.com>
+Date:   Wed Oct 20 02:05:33 2021 +0200
+
+    solve a problem of patch to database with adding another array to database
+
+[33mcommit 8e6f62e148d8d10744a385531563e5b2c95cfbac[m
+Author: Sara Sedaghat <75505464+Sarasedaghat8960@users.noreply.github.com>
+Date:   Tue Oct 19 22:14:12 2021 +0200
+
+    add change to remove problem of adding to database
+
+[33mcommit 7cfeea3685fa1851f47fb5646cf1932ba63d120f[m
+Merge: 4899d97 a14c0f6
+Author: axelpahne <77626073+axelpahne@users.noreply.github.com>
+Date:   Tue Oct 19 12:52:01 2021 +0200
+
+    Merge pull request #14 from EmmaHammar/AxelBranch
+    
+    Fixed Db structure, Form, project demo
+
+[33mcommit a14c0f621b4205698624350cb5eda0877e3df291[m[33m ([m[1;31morigin/AxelBranch[m[33m)[m
+Author: Axel Pahne <random@wwho.com>
+Date:   Tue Oct 19 00:49:22 2021 +0200
+
+    Fixed Db structure, Form, project demo
+
+[33mcommit 4899d971bc336eabfac3d1d7d69702330f1883e6[m[33m ([m[1;31morigin/SaraBranch[m[33m)[m
+Author: Axel Pahne <random@wwho.com>
+Date:   Wed Oct 13 17:02:56 2021 +0200
+
+    Added Routing
+
+[33mcommit 8d62adbd53fe67022c89d6aa9c6e24d5ac3acbc7[m
+Merge: 66afa51 14b7b0f
+Author: Axel Pahne <random@wwho.com>
+Date:   Wed Oct 13 15:17:06 2021 +0200
+
+    Merge branch 'main' of https://github.com/EmmaHammar/tidsestimatspoker-gr4
+
+[33mcommit 14b7b0f93469cd5dafee59f828e87ab5c5fee52b[m
+Merge: d950897 739cffd
+Author: axelpahne <77626073+axelpahne@users.noreply.github.com>
+Date:   Wed Oct 13 15:16:44 2021 +0200
+
+    Merge pull request #11 from EmmaHammar/AxelBranch
+    
+    Changed path to css file
+
+[33mcommit 66afa51fe771b9e00f05dd29a6f75a83b489fe8d[m
+Merge: 8fed6e1 d950897
+Author: Axel Pahne <random@wwho.com>
+Date:   Wed Oct 13 15:14:36 2021 +0200
+
+    Merge branch 'main' of https://github.com/EmmaHammar/tidsestimatspoker-gr4
+
+[33mcommit 8fed6e18ed74d5cc863fe876a15f71ac9b119129[m
+Author: Axel Pahne <random@wwho.com>
+Date:   Wed Oct 13 15:14:18 2021 +0200
+
+    Update css lin
+
+[33mcommit 739cffdbd6441ed16a9097ac14b87ea7f349300c[m
+Author: Axel Pahne <random@wwho.com>
+Date:   Wed Oct 13 15:11:05 2021 +0200
+
+    Changed path to css file
+
+[33mcommit d95089763523d8ffdd732401e6149555ebd66f16[m
+Author: axelpahne <77626073+axelpahne@users.noreply.github.com>
+Date:   Wed Oct 13 15:06:19 2021 +0200
+
+    Update README.md
+
+[33mcommit 8ec04e3af0d2727dc63bf9a5929bee56beb4dbf7[m
+Merge: 776b8eb 21aa3e6
+Author: axelpahne <77626073+axelpahne@users.noreply.github.com>
+Date:   Wed Oct 13 15:05:08 2021 +0200
+
+    Merge pull request #10 from EmmaHammar/AxelBranch
+    
+    Added css modules and structure
+
+[33mcommit 21aa3e64a3dd20494a73542d834d00fb13ef8935[m
+Author: Axel Pahne <random@wwho.com>
+Date:   Wed Oct 13 15:02:23 2021 +0200
+
+    Added css modules and structure
+
+[33mcommit 776b8eb71df9e0100c3efa726674d55da99dab2e[m
+Author: Axel Pahne <random@wwho.com>
+Date:   Wed Oct 13 10:48:40 2021 +0200
+
+    Fixed db structure
+
+[33mcommit 09ae9c5a64402c565c8ca1b6f310d0f5941a98f7[m
+Author: Axel Pahne <random@wwho.com>
+Date:   Wed Oct 13 09:30:11 2021 +0200
+
+    Inital Commit
+
+[33mcommit d2da61a3180b9724f7b19822b1ea5f8e20052f53[m
+Author: EmmaHammar <emma.s.hammar@gmail.com>
+Date:   Tue Oct 12 15:05:36 2021 +0200
+
+    initial commit + project structure + useFetch
