@@ -4,52 +4,116 @@ import styles from '../styles/Project.module.scss'
 import {ProjectContext }from '../context/projectsContext'
 
 export default function Project() {
+import { useState,useEffect } from 'react';
+import useFetch from 'use-http';
+export default function Project({projects}) {
+    const { get,patch,post} = useFetch("http://localhost:3000");
 
     //Hämtar de specifika projektet som klickats på från route
     const location = useLocation()
     const {project} = location.state
+    const [newmembersDetails,setnewmembersDetails]=useState({name: '', estTime: '', issueId: ''});
+    const [estTimeInfo,setTimeIfo]=useState([])
+    console.log(project)
 
-    //Hämtar alla projekt från projectContext (globalt state som håller state för projects)
-    let { projects, setProjects} = useContext(ProjectContext);
+    const addTime=(event)=>{
+        
+        console.log(newmembersDetails);
+      
+        
+        let newEstTime=[...estTimeInfo,{name: newmembersDetails.name, estTime: newmembersDetails.estTime, issueId: newmembersDetails.issueId}]
+       setTimeIfo(newEstTime);
+       
+        // console.log(newEstTime);
 
-    // console.log(project)
+        // console.log(estTimeInfo);
+        // console.log(event.target.id);
+        // console.log(newmembersDetails);
+        // console.log(projects);
+        // let ProjectId=1
+        // patch('/projects/1',{issueDetail:estTimeInfo})
+        // .then(data=>{
+        //     console.log(data);
+        
+        //   })  
 
-    //State för input estTime
-    const [input, setInput] = useState("")
+          
+       
+      
 
-    //State för vald person
-    const [person, setPerson] = useState({})
-
-    //Add est time
-    const addEstTime = (issue) => {
-
-        //Denna funktion ska lägga till estTime
-
-        // let update = [...project.issueList]
-
-        // const findValue = (element) => element.id === issue.id;
-        // // Find index of issue
-        // let key = update.findIndex(findValue);
-
-        // console.log(update[key])
-
-        // // update[key] = {...update[key] = issue}
-
-        // console.log(update)
-
+        
     }
+    var projectId = localStorage.getItem('projectId');
+    console.log(estTimeInfo);
+    useEffect(() => {
+        console.log(projects);
+       projects.filter(project=>project.id==1).map((project)=>{
+      
+           console.log(project.issueList);
+           project.issueList.map((issueList)=>{
+            patch('/projects/'+projectId,{issueDetail:estTimeInfo},
+            )
+                .then(data=>{
+                    console.log(data);
+                
+                }) 
+           })
+
+       })
+      
+    }, [estTimeInfo])
+   const calculate=()=>{
+       console.log(estTimeInfo);
+    let issue1=estTimeInfo.filter(project=>project.issueId==1)
+    let issue2=estTimeInfo.filter(project=>project.issueId==2)
+    let issue3=estTimeInfo.filter(project=>project.issueId==3)
+    let issue4=estTimeInfo.filter(project=>project.issueId==3)
+    let issue5=estTimeInfo.filter(project=>project.issueId==3)
+    let issue6=estTimeInfo.filter(project=>project.issueId==3)
+    let issue7=estTimeInfo.filter(project=>project.issueId==3)
+    let issue8=estTimeInfo.filter(project=>project.issueId==3)
+    let issue9=estTimeInfo.filter(project=>project.issueId==3)
+    let issue=estTimeInfo.filter(project=>project.issueId==3)
 
 
 
+       console.log('issue1',issue1);
+       console.log(issue1.length);
+       if(issue1.length==5){
+           console.log('issue1 ok');
+          
+       }else console.log('issue1 not ok');
+       console.log('issue2',issue2);   
+       if(issue2.length==5){
+        console.log('issue2 ok');
+    }else console.log(' issue2not ok');
+    if(issue3.length==5){
+        console.log('issue3 ok');
+    }else console.log(' issue3 not ok');
+    if(issue4.length==5){
+        console.log('issue4 ok');
+    }else console.log(' issue2not ok');
+    if(issue5.length==5){
+        console.log('issue5 ok');
+    }else console.log(' issue5not ok');
+    if(issue6.length==6){
+        console.log('issue6 ok');
+    }else console.log(' issue6not ok');
+    if(issue7.length==5){
+        console.log('issue7 ok');
+    }else console.log(' issue7not ok');
+    if(issue8.length==5){
+        console.log('issue8 ok');
+    }else console.log(' issue8not ok');
+    if(issue8.length==5){
+        console.log('issue8 ok');
+    }else console.log(' issue8not ok');
 
-
-    //Filter personIssue (Only get the selected persons issue)
-    const personIssue = (item) => {
-        let issues = item.participants.filter(issue => issue.id == person.id)
-        issues = issues[0]
-        return issues.estTime
-    }
-
+       
+        
+       
+   
+   }
 
     return (
 
@@ -60,7 +124,7 @@ export default function Project() {
                     <button 
                      className={styles.button} 
                      key={i}
-                     onClick={() => setPerson(item)}
+                     onClick={()=>{setnewmembersDetails(previousState=>{return{...previousState,name:item.name}})}}
                     >
                         {item.name}
                     </button>
@@ -72,37 +136,30 @@ export default function Project() {
                 <button> Add Issue</button>
             </div>
 
-            <div className={styles.issueContainer}>
-                <p>{person.name}</p>
-                
-                <div className={styles.issueList}>
-                    <div>
-                        <p>#</p>
-                        <p>Issue</p>
-                        <p>Your Est</p>
-                        <p>Est</p>
-                        <p>Lägg till</p>
-                    </div>
-                    {project.issueList.map((issue, i) => (
-                        
-                        <div  key={i}>
-                            <p> {i}</p>
-                            <p> {issue.issueTitle}</p>
-                            <p> {person.id ? personIssue(issue) :""} </p>
-                            <input type="text"
-                                type="text"
-                                value={input}
-                                onChange={({ target }) => setInput(target.value)} 
-                            />
-                            <button id={issue.id}
-                                onClick={() => addEstTime(issue)}
-                            >Lägg till</button>
-                        </div>
-                    ))}
+            <div className={styles.issueList}>
+                <div>
+                    <p>#</p>
+                    <p>Issue</p>
+                    <p>Your est</p>
                 </div>
-            </div>
+                {project.issueList.map((issue, i) => (
+                    
+                    <div key={i}>
+                        <p> {i}</p>
+                        <p> {issue.issueTitle}</p>
+                        <input  type="number"  id={i+1}  onChange={(event)=>setnewmembersDetails(previousState=>{return{...previousState,estTime:event.target.value,issueId:event.target.id}})} />
+                        <button onClick={addTime} id={issue.id}>Add your time </button>
+                       
 
+                    </div>
+                        
+                       
+                    ))}
+            
+            </div>
+            <div><button onClick={calculate}>calculate</button></div>
         </div>
-        
+       
     )
+}
 };

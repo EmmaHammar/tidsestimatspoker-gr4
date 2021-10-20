@@ -10,7 +10,19 @@ import {ProjectProvider }from './context/projectsContext'
 
 
 function App() {
+  const { get} = useFetch("http://localhost:3000");
+  const [projects, setProjects] = useState([]);
 
+  useEffect(() => {
+      getProjects();
+  }, [])
+
+  const getProjects = () => {
+      get("/projects")
+          .then(data => {
+              setProjects(data);
+          })
+  };
   return (
 
     <Router>
@@ -24,7 +36,7 @@ function App() {
             <AddProject />
           </Route>
           <Route exact path="/Project">
-            <Project />
+            <Project projects={projects}/>
           </Route>
         </Switch>
       </ProjectProvider>
