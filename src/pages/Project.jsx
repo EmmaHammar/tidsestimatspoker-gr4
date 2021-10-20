@@ -6,7 +6,10 @@ import {ProjectContext }from '../context/projectsContext'
 
 import { useState,useEffect } from 'react';
 import useFetch from 'use-http';
-import Calculate from '../components/calculate/Calculate';
+import EstProject from '../components/calculate/EstProject';
+import EstProject2 from '../components/calculate/EstProject2';
+import EstProject3 from '../components/calculate/EstProject3';
+
 export default function Project({projects}) {
     const { get,patch,post} = useFetch("http://localhost:3000");
 
@@ -15,51 +18,38 @@ export default function Project({projects}) {
     const {project} = location.state
     const [newmembersDetails,setnewmembersDetails]=useState({name: '', estTime: '', issueId: ''});
     const [estTimeInfo,setTimeIfo]=useState([])
-    const [issue1,setIssue1]=useState([])
-    const [issue2,setIssue2]=useState([])
-    const [issue3,setIssue3]=useState([])
+    const [showCalc1, setShowCalc1]=useState(false);
+    const [showCalc2, setShowCalc2]=useState(false);
+    const [showCalc3, setShowCalc3]=useState(false);
 
-    console.log(project)
+    const [issue1, setIssue1]=useState([]);
+    const [issue2, setIssue2]=useState([]);
+
+
+    // console.log(project)
 
     const addTime=(event)=>{
         
-        console.log(newmembersDetails);
+        // console.log(newmembersDetails);
       
         
         let newEstTime=[...estTimeInfo,{name: newmembersDetails.name, estTime: newmembersDetails.estTime, issueId: newmembersDetails.issueId}]
-       setTimeIfo(newEstTime);
-       
-        // console.log(newEstTime);
-
-        // console.log(estTimeInfo);
-        // console.log(event.target.id);
-        // console.log(newmembersDetails);
-        // console.log(projects);
-        // let ProjectId=1
-        // patch('/projects/1',{issueDetail:estTimeInfo})
-        // .then(data=>{
-        //     console.log(data);
-        
-        //   })  
-
-          
-       
-      
-
-        
+       setTimeIfo(newEstTime);      
     }
     var projectId = localStorage.getItem('projectId');
-    console.log(estTimeInfo);
+    console.log("estTimeInfo", estTimeInfo);
+
+
     useEffect(() => {
-        console.log(projects);
+        // console.log(projects);
        projects.filter(project=>project.id==1).map((project)=>{
       
-           console.log(project.issueList);
+        //    console.log(project.issueList);
            project.issueList.map((issueList)=>{
             patch('/projects/'+projectId,{issueDetail:estTimeInfo},
             )
                 .then(data=>{
-                    console.log(data);
+                    // console.log(data);
                 
                 }) 
            })
@@ -69,59 +59,36 @@ export default function Project({projects}) {
     }, [estTimeInfo])
    const calculate=()=>{
        console.log(estTimeInfo);
-    let issueNo1=estTimeInfo.filter(project=>project.issueId==1)
-    let issueNo2=estTimeInfo.filter(project=>project.issueId==2)
-    let issueNo3=estTimeInfo.filter(project=>project.issueId==3)
-    let issue4=estTimeInfo.filter(project=>project.issueId==3)
-    let issue5=estTimeInfo.filter(project=>project.issueId==3)
-    let issue6=estTimeInfo.filter(project=>project.issueId==3)
-    let issue7=estTimeInfo.filter(project=>project.issueId==3)
-    let issue8=estTimeInfo.filter(project=>project.issueId==3)
-    let issue9=estTimeInfo.filter(project=>project.issueId==3)
-    let issue=estTimeInfo.filter(project=>project.issueId==3)
+    let issue1=estTimeInfo.filter(project=>project.issueId==1)
+    let issue2=estTimeInfo.filter(project=>project.issueId==2)
+   
 
 
 
-       console.log('issue1',issue1);
-       console.log(issue1.length);
-       setIssue1(issueNo1)
-       setIssue2(issueNo2)
-       setIssue3(issueNo3)
+    //    console.log('issue1',issue1);
+    //    console.log(issue1.length);
        if(issue1.length==5){
            console.log('issue1 ok');
-          
+           setShowCalc1(true);
+           setIssue1(issue1);   
        }else console.log('issue1 not ok');
-       console.log('issue2',issue2);   
+       
+       if (issue2 != []) {
+            console.log("issue2 state sparat för var ej noll");
+        } else {
+            console.log("issue2 är noll -> ej spara");
+        }
+
        if(issue2.length==5){
         console.log('issue2 ok');
-    }else console.log(' issue2not ok');
-    if(issue3.length==5){
-        console.log('issue3 ok');
-    }else console.log(' issue3 not ok');
-    if(issue4.length==5){
-        console.log('issue4 ok');
-    }else console.log(' issue2not ok');
-    if(issue5.length==5){
-        console.log('issue5 ok');
-    }else console.log(' issue5not ok');
-    if(issue6.length==6){
-        console.log('issue6 ok');
-    }else console.log(' issue6not ok');
-    if(issue7.length==5){
-        console.log('issue7 ok');
-    }else console.log(' issue7not ok');
-    if(issue8.length==5){
-        console.log('issue8 ok');
-    }else console.log(' issue8not ok');
-    if(issue8.length==5){
-        console.log('issue8 ok');
-    }else console.log(' issue8not ok');
+            setIssue2(issue2);
+            setShowCalc2(true);
 
-       
-        
-       
+
+    }else console.log(' issue2not ok');
    
-   }
+      }
+      console.log('issue1',issue1);
 
     return (
 
@@ -166,7 +133,10 @@ export default function Project({projects}) {
             
             </div>
             <div><button onClick={calculate}>calculate</button></div>
-            <Calculate issue1={issue1,issue2,issue2} />
+            {showCalc1 ? <EstProject issue1={issue1}   /> : ""}
+            {showCalc2 ? <EstProject2   issue2={issue2}  /> : ""}
+
+
         </div>
        
     )

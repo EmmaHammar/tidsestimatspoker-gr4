@@ -8,4 +8,4 @@ export default function Calculate({issue1,issue2,issue3}) {
           
         </div>
     )
-};
+}

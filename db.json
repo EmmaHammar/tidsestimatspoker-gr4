@@ -132,12 +132,37 @@
           "issueId": "1"
         },
         {
-          "name": "Sara M",
+          "name": "Sandra",
+          "estTime": "1",
+          "issueId": "1"
+        },
+        {
+          "name": "Sara K",
+          "estTime": "1",
+          "issueId": "1"
+        },
+        {
+          "name": "Axel",
+          "estTime": "1",
+          "issueId": "2"
+        },
+        {
+          "name": "Emma",
           "estTime": "1",
           "issueId": "2"
         },
         {
           "name": "Sara M",
+          "estTime": "1",
+          "issueId": "2"
+        },
+        {
+          "name": "Sandra",
+          "estTime": "1",
+          "issueId": "2"
+        },
+        {
+          "name": "Sara K",
           "estTime": "1",
           "issueId": "2"
         }
@@ -257,7 +282,8 @@
             }
           ]
         }
-      ]
+      ],
+      "issueDetail": []
     },
     {
       "id": 3,
@@ -372,6 +398,58 @@
               "estTime": 0
             }
           ]
+        }
+      ],
+      "issueDetail": [
+        {
+          "name": "Axel",
+          "estTime": "2",
+          "issueId": "1"
+        },
+        {
+          "name": "Emma",
+          "estTime": "22",
+          "issueId": "1"
+        },
+        {
+          "name": "Sara M",
+          "estTime": "222",
+          "issueId": "1"
+        },
+        {
+          "name": "Sandra",
+          "estTime": "2222",
+          "issueId": "1"
+        },
+        {
+          "name": "Sara K",
+          "estTime": "22222",
+          "issueId": "1"
+        },
+        {
+          "name": "Axel",
+          "estTime": "1",
+          "issueId": "2"
+        },
+        {
+          "name": "Emma",
+          "estTime": "11",
+          "issueId": "2"
+        },
+        {
+          "name": "Sara M",
+          "estTime": "111",
+          "issueId": "2"
+        },
+        {
+          "name": "Sandra",
+          "estTime": "1111",
+          "issueId": "2"
+        },
+        {
+          "name": "Sara K",
+          "estTime": "11111",
+          "issueId": "2"
         }
       ]
     },
