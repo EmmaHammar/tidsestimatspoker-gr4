@@ -3,6 +3,7 @@ import styles from './Form.module.scss'
 import { InputContext} from '../../context/formContext'
 import { ProjectContext} from '../../context/projectsContext'
 import useFetch from 'use-http';
+import { Link } from 'react-router-dom';
 
 import { 
     Dropdown, 
@@ -147,6 +148,11 @@ let { emptyParticipants, emptyIssues, toggle, setToggle} = useContext(InputConte
 
                 <button className={styles.submitButton} type="submit">Add Project</button>
             </form>
+            <div className={styles.listHeader}>
+                <Link to="/" style={{ textDecoration: 'none' }}>
+                    <button className={styles.backButton}>Tillbaka</button>  
+                </Link>
+            </div>
         </div>
     )
 }
