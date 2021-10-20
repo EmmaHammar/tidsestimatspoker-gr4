@@ -6,6 +6,7 @@ import {ProjectContext }from '../context/projectsContext'
 
 import { useState,useEffect } from 'react';
 import useFetch from 'use-http';
+import Calculate from '../components/calculate/Calculate';
 export default function Project({projects}) {
     const { get,patch,post} = useFetch("http://localhost:3000");
 
@@ -14,6 +15,10 @@ export default function Project({projects}) {
     const {project} = location.state
     const [newmembersDetails,setnewmembersDetails]=useState({name: '', estTime: '', issueId: ''});
     const [estTimeInfo,setTimeIfo]=useState([])
+    const [issue1,setIssue1]=useState([])
+    const [issue2,setIssue2]=useState([])
+    const [issue3,setIssue3]=useState([])
+
     console.log(project)
 
     const addTime=(event)=>{
@@ -64,9 +69,9 @@ export default function Project({projects}) {
     }, [estTimeInfo])
    const calculate=()=>{
        console.log(estTimeInfo);
-    let issue1=estTimeInfo.filter(project=>project.issueId==1)
-    let issue2=estTimeInfo.filter(project=>project.issueId==2)
-    let issue3=estTimeInfo.filter(project=>project.issueId==3)
+    let issueNo1=estTimeInfo.filter(project=>project.issueId==1)
+    let issueNo2=estTimeInfo.filter(project=>project.issueId==2)
+    let issueNo3=estTimeInfo.filter(project=>project.issueId==3)
     let issue4=estTimeInfo.filter(project=>project.issueId==3)
     let issue5=estTimeInfo.filter(project=>project.issueId==3)
     let issue6=estTimeInfo.filter(project=>project.issueId==3)
@@ -79,6 +84,9 @@ export default function Project({projects}) {
 
        console.log('issue1',issue1);
        console.log(issue1.length);
+       setIssue1(issueNo1)
+       setIssue2(issueNo2)
+       setIssue3(issueNo3)
        if(issue1.length==5){
            console.log('issue1 ok');
           
@@ -158,6 +166,7 @@ export default function Project({projects}) {
             
             </div>
             <div><button onClick={calculate}>calculate</button></div>
+            <Calculate issue1={issue1,issue2,issue2} />
         </div>
        
     )
