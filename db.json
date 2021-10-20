@@ -40,10 +40,41 @@
       "issueList": [
         {
           "id": "4160e0e3-eaba-4e3a-85bd-8cc6f81ccf57",
-          "issueTitle": "Fixa projekt sida ",
+          "issueTitle": "Fixa projekt sida",
           "desc": "Fixa projekt sidan så den ser bra ut",
           "color": "#b7efcd",
-          "participants": []
+          "participants": [
+            {
+              "id": "c6f2fdf6-2b68-4f62-b394-53aa84119cfe",
+              "name": "Axel",
+              "color": "#ce0f3d",
+              "estTime": 1
+            },
+            {
+              "id": "0a20e65e-19cb-4d2c-bc2d-b9517083616f",
+              "name": "Emma",
+              "color": "#feb72b",
+              "estTime": 0
+            },
+            {
+              "id": "0fc202cc-20dd-4bc4-841d-3a713ba16f84",
+              "name": "Sara M",
+              "color": "#edffea",
+              "estTime": 0
+            },
+            {
+              "id": "ffa17157-3f1d-423a-8012-8c19283694c7",
+              "name": "Sandra",
+              "color": "#ce0f3d",
+              "estTime": 0
+            },
+            {
+              "id": "f23b31fe-978b-4b3c-bea1-1ed6c78f10a2",
+              "name": "Sara K",
+              "color": "#ffc6c7",
+              "estTime": 0
+            }
+          ]
         },
         {
           "id": "e136d128-26d6-46f3-9cca-b4085dd6410c",
@@ -55,25 +86,25 @@
               "id": "c6f2fdf6-2b68-4f62-b394-53aa84119cfe",
               "name": "Axel",
               "color": "#ce0f3d",
-              "estTime": 5
+              "estTime": 0
             },
             {
               "id": "0a20e65e-19cb-4d2c-bc2d-b9517083616f",
               "name": "Emma",
               "color": "#feb72b",
-              "estTime": 5
+              "estTime": 0
             },
             {
               "id": "0fc202cc-20dd-4bc4-841d-3a713ba16f84",
               "name": "Sara M",
               "color": "#edffea",
-              "estTime": 5
+              "estTime": 0
             },
             {
               "id": "ffa17157-3f1d-423a-8012-8c19283694c7",
               "name": "Sandra",
               "color": "#ce0f3d",
-              "estTime": 5
+              "estTime": 0
             },
             {
               "id": "f23b31fe-978b-4b3c-bea1-1ed6c78f10a2",
@@ -84,11 +115,23 @@
           ]
         }
       ],
-      "issueDetaile": {
-        "name": "Axel",
-        "estTime": "5",
-        "issueId": "4160e0e3-eaba-4e3a-85bd-8cc6f81ccf57"
-      }
+      "issueDetail": [
+        {
+          "name": "Axel",
+          "estTime": "1",
+          "issueId": "1"
+        },
+        {
+          "name": "Emma",
+          "estTime": "1",
+          "issueId": "1"
+        },
+        {
+          "name": "Sara M",
+          "estTime": "1",
+          "issueId": "2"
+        }
+      ]
     },
     {
       "id": 2,
@@ -323,24 +366,134 @@
       ]
     },
     {
-      "name": "Axel",
-      "estTime": "5",
-      "id": 4
-    },
-    {
-      "name": "Emma",
-      "estTime": "1",
-      "id": 5
-    },
-    {
-      "name": "Sara M",
-      "estTime": "5",
-      "id": 6
-    },
-    {
-      "name": "Axel",
-      "estTime": "5",
-      "id": 7
+      "id": 4,
+      "projectName": "Hej",
+      "projectDesc": "asdasd",
+      "estComplete": "false",
+      "participants": [
+        {
+          "id": "e917567a-7976-4df1-8439-547c9373f453",
+          "name": "asd",
+          "color": "#4cd3c2",
+          "estTime": 0
+        },
+        {
+          "id": "fbe3dc59-7647-4815-8862-f4ba1d7a4d7b",
+          "name": "asd",
+          "color": "#ce0f3d",
+          "estTime": 0
+        },
+        {
+          "id": "802a60e8-4a1a-4f38-90cf-d3a406d20a69",
+          "name": "asd",
+          "color": "#fa744f",
+          "estTime": 0
+        },
+        {
+          "id": "c3d20ace-5b59-4033-a780-084699d970ab",
+          "name": "asd",
+          "color": "#b7efcd",
+          "estTime": 0
+        }
+      ],
+      "issueList": [
+        {
+          "id": "21e1d129-5188-43ef-a865-421d7c745535",
+          "issueTitle": "asd",
+          "desc": "",
+          "color": "#ea7ad7",
+          "participants": [
+            {
+              "id": "e917567a-7976-4df1-8439-547c9373f453",
+              "name": "asd",
+              "color": "#4cd3c2",
+              "estTime": 0
+            },
+            {
+              "id": "fbe3dc59-7647-4815-8862-f4ba1d7a4d7b",
+              "name": "asd",
+              "color": "#ce0f3d",
+              "estTime": 0
+            },
+            {
+              "id": "802a60e8-4a1a-4f38-90cf-d3a406d20a69",
+              "name": "asd",
+              "color": "#fa744f",
+              "estTime": 0
+            },
+            {
+              "id": "c3d20ace-5b59-4033-a780-084699d970ab",
+              "name": "asd",
+              "color": "#b7efcd",
+              "estTime": 0
+            }
+          ]
+        },
+        {
+          "id": "21e1d129-5188-43ef-a865-421d7c745535",
+          "issueTitle": "asd",
+          "desc": "asd",
+          "color": "#e85f99",
+          "participants": [
+            {
+              "id": "e917567a-7976-4df1-8439-547c9373f453",
+              "name": "asd",
+              "color": "#4cd3c2",
+              "estTime": 0
+            },
+            {
+              "id": "fbe3dc59-7647-4815-8862-f4ba1d7a4d7b",
+              "name": "asd",
+              "color": "#ce0f3d",
+              "estTime": 0
+            },
+            {
+              "id": "802a60e8-4a1a-4f38-90cf-d3a406d20a69",
+              "name": "asd",
+              "color": "#fa744f",
+              "estTime": 0
+            },
+            {
+              "id": "c3d20ace-5b59-4033-a780-084699d970ab",
+              "name": "asd",
+              "color": "#b7efcd",
+              "estTime": 0
+            }
+          ]
+        },
+        {
+          "id": "21e1d129-5188-43ef-a865-421d7c745535",
+          "issueTitle": "asd",
+          "desc": "asd",
+          "color": "#4cd3c2",
+          "participants": [
+            {
+              "id": "e917567a-7976-4df1-8439-547c9373f453",
+              "name": "asd",
+              "color": "#4cd3c2",
+              "estTime": 0
+            },
+            {
+              "id": "fbe3dc59-7647-4815-8862-f4ba1d7a4d7b",
+              "name": "asd",
+              "color": "#ce0f3d",
+              "estTime": 0
+            },
+            {
+              "id": "802a60e8-4a1a-4f38-90cf-d3a406d20a69",
+              "name": "asd",
+              "color": "#fa744f",
+              "estTime": 0
+            },
+            {
+              "id": "c3d20ace-5b59-4033-a780-084699d970ab",
+              "name": "asd",
+              "color": "#b7efcd",
+              "estTime": 0
+            }
+          ]
+        }
+      ]
     }
   ]
 }

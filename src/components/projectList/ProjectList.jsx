@@ -48,7 +48,7 @@ export default function ProjectList({projects}) {
                                 {item.estComplete ? <i className={`${styles.iconTrue} fas fa-check-circle`}/> : <i className={`${styles.iconFalse} fas fa-exclamation-circle`}/>}
 
                                 <Link to={{pathname: '/Project',state: {project: item}}}>
-                                    <button> Visit Project </button>
+                                    <button onClick={()=>localStorage.setItem('projectId', item.id)}> Visit Project </button>
                                 </Link>
                             </div>
                         </div> : ""

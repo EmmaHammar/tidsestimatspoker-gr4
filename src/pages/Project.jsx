@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom'
 import styles from '../styles/Project.module.scss'
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import useFetch from 'use-http';
 export default function Project({projects}) {
     const { get,patch,post} = useFetch("http://localhost:3000");
@@ -9,7 +9,7 @@ export default function Project({projects}) {
     const location = useLocation()
     const {project} = location.state
     const [newmembersDetails,setnewmembersDetails]=useState({name: '', estTime: '', issueId: ''});
-    const [estTimeInfo,setTimeIfo]=useState([{name: '', estTime: '', issueId: ''}])
+    const [estTimeInfo,setTimeIfo]=useState([])
     console.log(project)
 
     const addTime=(event)=>{
@@ -17,22 +17,21 @@ export default function Project({projects}) {
         console.log(newmembersDetails);
       
         
-        let newEstTime=[...estTimeInfo]
-       
-        newEstTime.push(newmembersDetails)
-        console.log(newEstTime);
-        setTimeIfo(newEstTime)
-
-    console.log(estTimeInfo);
-        console.log(event.target.id);
-        console.log(newmembersDetails);
-        console.log(projects);
-        let ProjectId=1
-        patch('/projects'+ProjectId,{issueDetaile:estTimeInfo})
-        .then(data=>{
-            console.log(data);
+        let newEstTime=[...estTimeInfo,{name: newmembersDetails.name, estTime: newmembersDetails.estTime, issueId: newmembersDetails.issueId}]
+       setTimeIfo(newEstTime)
         
-          })  
+        // console.log(newEstTime);
+
+        // console.log(estTimeInfo);
+        // console.log(event.target.id);
+        // console.log(newmembersDetails);
+        // console.log(projects);
+        // let ProjectId=1
+        // patch('/projects/1',{issueDetail:estTimeInfo})
+        // .then(data=>{
+        //     console.log(data);
+        
+        //   })  
 
           
        
@@ -40,7 +39,44 @@ export default function Project({projects}) {
 
         
     }
+    var projectId = localStorage.getItem('projectId');
+    console.log(estTimeInfo);
+    useEffect(() => {
+        console.log(projects);
+       projects.filter(project=>project.id==1).map((project)=>{
+      
+           console.log(project.issueList);
+           project.issueList.map((issueList)=>{
+            patch('/projects/'+projectId,{issueDetail:estTimeInfo})
+                .then(data=>{
+                    console.log(data);
+                
+                }) 
+           })
 
+       })
+      
+    }, [estTimeInfo])
+   const calculate=()=>{
+       console.log(estTimeInfo);
+    let issue1=estTimeInfo.filter(project=>project.issueId==1)
+    let issue2=estTimeInfo.filter(project=>project.issueId==2)
+    let issue3=estTimeInfo.filter(project=>project.issueId==3)
+
+
+       console.log('issue1',issue1);
+       
+        
+     
+      
+       
+          let estTimeIssue1=0
+        
+          console.log(estTimeIssue1);
+       
+       
+   
+   }
 
     return (
 
@@ -76,13 +112,13 @@ export default function Project({projects}) {
                     <div key={i}>
                         <p> {i}</p>
                         <p> {issue.issueTitle}</p>
-                        <input  type="number"  id={issue.issueId}  onChange={(event)=>setnewmembersDetails(previousState=>{return{...previousState,estTime:event.target.value,issueId:issue.id}})} />
+                        <input  type="number"  id={i+1}  onChange={(event)=>setnewmembersDetails(previousState=>{return{...previousState,estTime:event.target.value,issueId:event.target.id}})} />
                         <button onClick={addTime} id={issue.id}>Add your time </button>
                     </div>
                 ))}
             </div>
-
+            <div><button onClick={calculate}>calculate</button></div>
         </div>
-        
+       
     )
 };
