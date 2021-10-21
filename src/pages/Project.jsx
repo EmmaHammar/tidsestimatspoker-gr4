@@ -67,7 +67,7 @@ export default function Project({projects}) {
 
     //    console.log('issue1',issue1);
     //    console.log(issue1.length);
-       if(issue1.length==5){
+       if(issue1.length==(project.participants).length){
            console.log('issue1 ok');
            setShowCalc1(true);
            setIssue1(issue1);   
@@ -79,7 +79,7 @@ export default function Project({projects}) {
             console.log("issue2 är noll -> ej spara");
         }
 
-       if(issue2.length==5){
+       if(issue2.length==(project.participants).length){
         console.log('issue2 ok');
             setIssue2(issue2);
             setShowCalc2(true);
