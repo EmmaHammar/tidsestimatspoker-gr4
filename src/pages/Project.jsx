@@ -22,15 +22,12 @@ export default function Project({projects}) {
 
     const [issue1, setIssue1]=useState([]);
     const [issue2, setIssue2]=useState([]);
-
-
-    // console.log(project)
+    const [showIssueList, setShowIssueList] = useState(false);
 
     const addTime=(event)=>{
         
         // console.log(newmembersDetails);
       
-        
         let newEstTime=[...estTimeInfo,{name: newmembersDetails.name, estTime: newmembersDetails.estTime, issueId: newmembersDetails.issueId}]
        setTimeIfo(newEstTime);      
     }
@@ -60,9 +57,6 @@ export default function Project({projects}) {
     let issue1=estTimeInfo.filter(project=>project.issueId==1)
     let issue2=estTimeInfo.filter(project=>project.issueId==2)
    
-
-
-
     //    console.log('issue1',issue1);
     //    console.log(issue1.length);
        if(issue1.length==(project.participants).length){
@@ -97,37 +91,45 @@ export default function Project({projects}) {
                     <button 
                      className={styles.button} 
                      key={i}
-                     onClick={()=>{setnewmembersDetails(previousState=>{return{...previousState,name:item.name}})}}
+                     onClick={()=>{
+                        setShowIssueList(true);
+                        setnewmembersDetails(previousState=>{
+                            return{...previousState,name:item.name}})}}
                     >
                         {item.name}
                     </button>
                 ))}
             </div>
-
-           
-
-            <div className={styles.issueList}>
-                <div>
-                    <p>#</p>
-                    <p>Issue</p>
-                    <p>Your est</p>
-                </div>
-                {project.issueList.map((issue, i) => (
-                    
-                    <div key={i}>
-                        <p> {i}</p>
-                        <p> {issue.issueTitle}</p>
-                        <input  type="number"  id={i+1}  onChange={(event)=>setnewmembersDetails(previousState=>{return{...previousState,estTime:event.target.value,issueId:event.target.id}})} />
-                        <button onClick={addTime} id={issue.id}>Add your time </button>
-                       
-
-                    </div>
-                        
-                       
-                    ))}
             
-            </div>
-            <div><button onClick={calculate}>calculate</button></div>
+            {showIssueList ? 
+            <>
+                <div className={styles.issueList}>
+                    <h3>Estimera tiden {newmembersDetails.name}</h3>
+                    <div>
+                        <p>#</p>
+                        <p>Issue</p>
+                        <p>Your est</p>
+                    </div>
+                    {project.issueList.map((issue, i) => (
+                        
+                        <div key={i}> 
+                            
+                            <p> {i}</p>
+                            <p> {issue.issueTitle}</p>
+                            <input  type="number"  id={i+1}  onChange={(event)=>setnewmembersDetails(previousState=>{return{...previousState,estTime:event.target.value,issueId:event.target.id}})} />
+                            <button onClick={addTime} id={issue.id}>Add your time </button>
+                        
+
+                        </div>
+
+                        
+                        ))} 
+                </div> 
+                <div><button onClick={calculate}>calculate</button></div>
+            </>
+            : ""} 
+            
+            
             {showCalc1 ? <EstProject issue1={issue1}   /> : ""}
             {showCalc2 ? <EstProject2   issue2={issue2}  /> : ""}
 

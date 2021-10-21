@@ -1,3 +1,13 @@
+# Start project
+git clone https://github.com/EmmaHammar/tidsestimatspoker-gr4.git
+npm i
+npm start
+
+# Excerise
+I detta mini projekt så skall ni gemensamt ta fram ett verktyg där alla i gruppen kan se en samlig issues.
+En användare skall kunna “gissa” på antalet timmar hen tror att det kommer att ta att genomföra ett issue.
+När sedan alla användare har “gissat” på samtliga issues skapas en rapport som visar dels spannet på gissninar (högst och lägst) samt medel och median -tidsåtgång per issue.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
