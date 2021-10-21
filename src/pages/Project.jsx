@@ -8,7 +8,6 @@ import { useState,useEffect } from 'react';
 import useFetch from 'use-http';
 import EstProject from '../components/calculate/EstProject';
 import EstProject2 from '../components/calculate/EstProject2';
-import EstProject3 from '../components/calculate/EstProject3';
 
 export default function Project({projects}) {
     const { get,patch,post} = useFetch("http://localhost:3000");
@@ -20,7 +19,6 @@ export default function Project({projects}) {
     const [estTimeInfo,setTimeIfo]=useState([])
     const [showCalc1, setShowCalc1]=useState(false);
     const [showCalc2, setShowCalc2]=useState(false);
-    const [showCalc3, setShowCalc3]=useState(false);
 
     const [issue1, setIssue1]=useState([]);
     const [issue2, setIssue2]=useState([]);
