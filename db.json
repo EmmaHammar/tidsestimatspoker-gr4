@@ -115,33 +115,7 @@
           ]
         }
       ],
-      "issueDetail": [
-        {
-          "name": "Axel",
-          "estTime": "1",
-          "issueId": "1"
-        },
-        {
-          "name": "Emma",
-          "estTime": "2",
-          "issueId": "1"
-        },
-        {
-          "name": "Sara M",
-          "estTime": "3",
-          "issueId": "1"
-        },
-        {
-          "name": "Sandra",
-          "estTime": "4",
-          "issueId": "1"
-        },
-        {
-          "name": "Sara K",
-          "estTime": "5",
-          "issueId": "1"
-        }
-      ]
+      "issueDetail": []
     },
     {
       "id": 2,

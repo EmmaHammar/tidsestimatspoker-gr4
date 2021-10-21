@@ -103,12 +103,13 @@ export default function Project({projects}) {
             
             {showIssueList ? 
             <>
-                <div className={styles.issueList}>
+                <div className={styles.issueList} >
                     <h3>Estimera tiden {newmembersDetails.name}</h3>
-                    <div>
+                    <div className={styles.titles}>
                         <p>#</p>
                         <p>Issue</p>
                         <p>Your est</p>
+                        <p>Add est</p>
                     </div>
                     {project.issueList.map((issue, i) => (
                         
@@ -125,7 +126,10 @@ export default function Project({projects}) {
                         
                         ))} 
                 </div> 
-                <div><button onClick={calculate}>calculate</button></div>
+                    
+                    <div className={styles.calculate} >
+                        <button onClick={calculate}>Calculate</button>
+                    </div>
             </>
             : ""} 
             
